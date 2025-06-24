@@ -1,8 +1,4 @@
 
-# MLA Personal Branding App
-
-Designed by Dasari Mouli
-
 # 🇮🇳 MLA Personal Branding App – Development Guide
 
 A mobile and web platform to showcase an MLA’s initiatives, engage citizens, and push real-time updates using **Django**, **Flutter**, **Firebase**, and **GitHub Pages**.
