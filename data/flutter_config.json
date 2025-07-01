@@ -1,21 +1,13 @@
 {
-  "api_base_url": "https://dmouli408.github.io/mla-brand",
-  "endpoints": {
-    "posts": "/data/posts.json",
-    "summary": "/data/summary.json"
+  "api_endpoints": {
+    "posts": "https://dmouli408.github.io/mla-brand/data/posts.json",
+    "summary": "https://dmouli408.github.io/mla-brand/data/summary.json"
   },
-  "app_config": {
-    "title": "MLA Brand Blog",
-    "description": "Official blog and updates from MLA Brand",
-    "version": "1.0.0"
+  "media_base_url": "https://dmouli408.github.io/mla-brand/media",
+  "website_info": {
+    "name": "MLA Brand",
+    "repository": "https://github.com/dmouli408/mla-brand.git",
+    "github_pages_url": "https://dmouli408.github.io/mla-brand"
   },
-  "stats": {
-    "total_posts": 32,
-    "featured_posts": 0,
-    "last_updated": "2025-07-01T23:47:51.328574"
-  },
-  "deployment": {
-    "type": "incremental",
-    "last_deploy": "2025-07-01T23:47:51.329218"
-  }
+  "last_updated": "2025-07-01T23:48:06.687278"
 }
