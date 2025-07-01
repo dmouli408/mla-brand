@@ -1,141 +1,124 @@
+# MLA Brand - Blog API Export
 
-# 🇮🇳 MLA Personal Branding App – Development Guide
+This repository contains exported blog data and media files from the MLA Brand Django website for use with Flutter mobile applications.
 
-A mobile and web platform to showcase an MLA’s initiatives, engage citizens, and push real-time updates using **Django**, **Flutter**, **Firebase**, and **GitHub Pages**.
+## 🏢 About MLA Brand
+Static API export from Django blog system, optimized for mobile app consumption.
 
----
+## 📊 Export Summary
+- **Export Date**: 2025-07-01T22:25:54.116378
+- **Total Posts**: 31
+- **Published Posts**: 31
+- **Total Images**: 22
+- **Repository**: https://github.com/dmouli408/mla-brand.git
 
-## 🧱 1. Project Setup
+## 🔗 API Endpoints
 
-- ✅ Create GitHub repositories:
-  - `mla-backend` (Django)
-  - `mla-app` (Flutter)
-  - `mla-brand.github.io` (for GitHub Pages)
-
-- ✅ Choose your hosting:
-  - Free: PythonAnywhere or Render
-  - VPS: Hostinger / DigitalOcean
-
-- ✅ Configure domain (optional)
-- ✅ Initialize Flutter and Django apps
-- ✅ Set up Firebase for push notifications
-
----
-
-## 👥 2. User Management (Django Admin Panel)
-
-Allow only **Media Team** to log in and manage content:
-
-```python
-class User(AbstractUser):
-    ROLE_CHOICES = (
-        ('admin', 'Admin'),
-        ('media', 'Media Team'),
-    )
-    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='media')
+### Posts Data
+```
+https://dmouli408.github.io/mla-brand/data/posts.json
 ```
 
-- Enable login via Django Admin
-- Restrict each media user to manage only their posts
-- Create superuser (`python manage.py createsuperuser`) for full control
-
----
-
-## 📰 3. Content Posting (Django)
-
-```python
-class Post(models.Model):
-    title = models.CharField(max_length=255)
-    description = models.TextField()
-    image = models.ImageField(upload_to='posts/')
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
+### Summary Data
+```
+https://dmouli408.github.io/mla-brand/data/summary.json
 ```
 
-- Use `admin.py` customization to restrict `media` users to only their own posts
-- Upload posts with images and descriptions
+### Flutter Config
+```
+https://dmouli408.github.io/mla-brand/data/flutter_config.json
+```
 
----
+## 📁 Directory Structure
 
-## 🗃️ 4. Static Export (Optional for GitHub Pages)
+```
+├── data/
+│   ├── posts.json          # All blog posts with full content
+│   ├── summary.json        # Export metadata and statistics
+│   └── flutter_config.json # Flutter app configuration
+├── media/
+│   ├── posts/             # Featured post images
+│   ├── gallery/           # Post gallery images
+│   └── ckeditor_uploads/  # Inline content images
+├── _config.yml            # GitHub Pages configuration
+├── _headers               # CORS headers for API access
+├── .nojekyll              # Bypass Jekyll processing
+└── README.md              # This documentation
+```
 
-- Export posts and images to:
-  - `posts.json`
-  - `/images/post1.jpg`, `/images/post2.jpg`
-- Push static content to GitHub Pages repo
+## 🚀 Flutter Integration
 
----
-
-## 🌍 5. Hosting Static Content (GitHub Pages)
-
-- Create repo: `mla-brand.github.io`
-- Enable GitHub Pages in repo settings
-- Serve static content at `https://mla-brand.github.io`
-
----
-
-## 📱 6. Flutter App Setup
-
-- Use `http` package to fetch JSON
-- Display:
-  - 🏠 Homepage
-  - 📸 Gallery
-  - 📜 Post detail
-  - 📅 Events
-
+### Basic Setup
 ```dart
-final response = await http.get(Uri.parse('https://mla-brand.github.io/posts.json'));
+class MlaBrandApiService {
+  static const String baseUrl = 'https://dmouli408.github.io/mla-brand';
+  static const String postsEndpoint = '$baseUrl/data/posts.json';
+  static const String configEndpoint = '$baseUrl/data/flutter_config.json';
+  
+  Future<List<Post>> fetchPosts() async {
+    final response = await http.get(Uri.parse(postsEndpoint));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = json.decode(response.body);
+      return data.map((json) => Post.fromJson(json)).toList();
+    }
+    throw Exception('Failed to load MLA Brand posts');
+  }
+}
 ```
 
----
+### Image Loading
+```dart
+// Featured image
+NetworkImage('https://dmouli408.github.io/mla-brand/media/posts/your-image.webp')
 
-## 🔔 7. Push Notifications (Firebase FCM)
+// Gallery images
+NetworkImage('https://dmouli408.github.io/mla-brand/media/gallery/gallery-image.webp')
 
-```python
-def send_fcm_notification(title, body):
-    headers = {
-        'Authorization': 'key=YOUR_SERVER_KEY',
-        'Content-Type': 'application/json',
-    }
-    data = {
-        'to': '/topics/all',
-        'notification': {'title': title, 'body': body},
-    }
-    requests.post('https://fcm.googleapis.com/fcm/send', headers=headers, json=data)
+// Content images (from CKEditor)
+NetworkImage('https://dmouli408.github.io/mla-brand/media/ckeditor_uploads/content-image.webp')
 ```
 
+### Post Data Structure
+```dart
+class Post {
+  final int id;
+  final String title;
+  final String slug;
+  final String content;  // HTML content with updated image URLs
+  final String? featuredImage;
+  final List<GalleryImage> galleryImages;
+  final Author author;
+  final Category? category;
+  final List<Tag> tags;
+  final String status;
+  final bool featured;
+  final int views;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final String metaTitle;
+  final String metaDescription;
+  final String metaKeywords;
+  
+  // ... fromJson constructor
+}
+```
+
+## 🔄 Auto-Update
+This export is generated automatically from the Django management command:
+```bash
+python manage.py export_posts_to_json --copy-images --published-only
+```
+
+## 📱 Mobile App Features Supported
+- ✅ Complete post content with HTML
+- ✅ Featured images optimized for mobile
+- ✅ Gallery images with captions
+- ✅ Author and category information
+- ✅ Tags and SEO metadata
+- ✅ CORS-enabled API endpoints
+- ✅ WebP image format for performance
+
 ---
-
-## 🧪 8. Load Testing (Optional)
-
-- Use **Locust** or **JMeter**
-- Simulate 1000–5000 users
-- Monitor VPS resource usage
-
----
-
-## ⚡ 9. Optimization Tips
-
-- Pagination
-- Caching (Redis)
-- Image compression
-- Index `created_at`, `created_by`
-
----
-
-## 🚀 10. Deployment & Maintenance
-
-- Deploy Django (Gunicorn + Nginx or PythonAnywhere)
-- Sync content to GitHub Pages
-- Automate with GitHub Actions or scripts
-
----
-
-## 👨‍💻 Developer
-
-**Dasari Mouli**  
-*Full Stack Developer*  
-Project Head – Digital Assistant Community  
-📍 Vijayawada, Andhra Pradesh, India
-
-> “Building digital bridges for smarter local governance.”
+**Last Updated**: 2025-07-01T22:25:54.116378  
+**Generated by**: Django Export Management Command  
+**Repository**: https://github.com/dmouli408/mla-brand.git
