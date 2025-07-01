@@ -1,1 +1,13 @@
-ew0KICAiYXBpX2VuZHBvaW50cyI6IHsNCiAgICAicG9zdHMiOiAiaHR0cHM6Ly9kbW91bGk0MDguZ2l0aHViLmlvL21sYS1icmFuZC9kYXRhL3Bvc3RzLmpzb24iLA0KICAgICJzdW1tYXJ5IjogImh0dHBzOi8vZG1vdWxpNDA4LmdpdGh1Yi5pby9tbGEtYnJhbmQvZGF0YS9zdW1tYXJ5Lmpzb24iDQogIH0sDQogICJtZWRpYV9iYXNlX3VybCI6ICJodHRwczovL2Rtb3VsaTQwOC5naXRodWIuaW8vbWxhLWJyYW5kL21lZGlhIiwNCiAgIndlYnNpdGVfaW5mbyI6IHsNCiAgICAibmFtZSI6ICJNTEEgQnJhbmQiLA0KICAgICJyZXBvc2l0b3J5IjogImh0dHBzOi8vZ2l0aHViLmNvbS9kbW91bGk0MDgvbWxhLWJyYW5kLmdpdCIsDQogICAgImdpdGh1Yl9wYWdlc191cmwiOiAiaHR0cHM6Ly9kbW91bGk0MDguZ2l0aHViLmlvL21sYS1icmFuZCINCiAgfSwNCiAgImxhc3RfdXBkYXRlZCI6ICIyMDI1LTA3LTAxVDIxOjU5OjI2LjYyNDQ4OSINCn0=
+{
+  "api_endpoints": {
+    "posts": "https://dmouli408.github.io/mla-brand/data/posts.json",
+    "summary": "https://dmouli408.github.io/mla-brand/data/summary.json"
+  },
+  "media_base_url": "https://dmouli408.github.io/mla-brand/media",
+  "website_info": {
+    "name": "MLA Brand",
+    "repository": "https://github.com/dmouli408/mla-brand.git",
+    "github_pages_url": "https://dmouli408.github.io/mla-brand"
+  },
+  "last_updated": "2025-07-01T21:59:26.624489"
+}
