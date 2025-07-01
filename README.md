@@ -1,1 +1,124 @@
-IyBNTEEgQnJhbmQgLSBCbG9nIEFQSSBFeHBvcnQNCg0KVGhpcyByZXBvc2l0b3J5IGNvbnRhaW5zIGV4cG9ydGVkIGJsb2cgZGF0YSBhbmQgbWVkaWEgZmlsZXMgZnJvbSB0aGUgTUxBIEJyYW5kIERqYW5nbyB3ZWJzaXRlIGZvciB1c2Ugd2l0aCBGbHV0dGVyIG1vYmlsZSBhcHBsaWNhdGlvbnMuDQoNCiMjIPCfj6IgQWJvdXQgTUxBIEJyYW5kDQpTdGF0aWMgQVBJIGV4cG9ydCBmcm9tIERqYW5nbyBibG9nIHN5c3RlbSwgb3B0aW1pemVkIGZvciBtb2JpbGUgYXBwIGNvbnN1bXB0aW9uLg0KDQojIyDwn5OKIEV4cG9ydCBTdW1tYXJ5DQotICoqRXhwb3J0IERhdGUqKjogMjAyNS0wNy0wMVQyMTo1OToyNi42MjQ0ODkNCi0gKipUb3RhbCBQb3N0cyoqOiAzMA0KLSAqKlB1Ymxpc2hlZCBQb3N0cyoqOiAzMA0KLSAqKlRvdGFsIEltYWdlcyoqOiAwDQotICoqUmVwb3NpdG9yeSoqOiBodHRwczovL2dpdGh1Yi5jb20vZG1vdWxpNDA4L21sYS1icmFuZC5naXQNCg0KIyMg8J+UlyBBUEkgRW5kcG9pbnRzDQoNCiMjIyBQb3N0cyBEYXRhDQpgYGANCmh0dHBzOi8vZG1vdWxpNDA4LmdpdGh1Yi5pby9tbGEtYnJhbmQvZGF0YS9wb3N0cy5qc29uDQpgYGANCg0KIyMjIFN1bW1hcnkgRGF0YQ0KYGBgDQpodHRwczovL2Rtb3VsaTQwOC5naXRodWIuaW8vbWxhLWJyYW5kL2RhdGEvc3VtbWFyeS5qc29uDQpgYGANCg0KIyMjIEZsdXR0ZXIgQ29uZmlnDQpgYGANCmh0dHBzOi8vZG1vdWxpNDA4LmdpdGh1Yi5pby9tbGEtYnJhbmQvZGF0YS9mbHV0dGVyX2NvbmZpZy5qc29uDQpgYGANCg0KIyMg8J+TgSBEaXJlY3RvcnkgU3RydWN0dXJlDQoNCmBgYA0K4pSc4pSA4pSAIGRhdGEvDQrilIIgICDilJzilIDilIAgcG9zdHMuanNvbiAgICAgICAgICAjIEFsbCBibG9nIHBvc3RzIHdpdGggZnVsbCBjb250ZW50DQrilIIgICDilJzilIDilIAgc3VtbWFyeS5qc29uICAgICAgICAjIEV4cG9ydCBtZXRhZGF0YSBhbmQgc3RhdGlzdGljcw0K4pSCICAg4pSU4pSA4pSAIGZsdXR0ZXJfY29uZmlnLmpzb24gIyBGbHV0dGVyIGFwcCBjb25maWd1cmF0aW9uDQrilJzilIDilIAgbWVkaWEvDQrilIIgICDilJzilIDilIAgcG9zdHMvICAgICAgICAgICAgICMgRmVhdHVyZWQgcG9zdCBpbWFnZXMNCuKUgiAgIOKUnOKUgOKUgCBnYWxsZXJ5LyAgICAgICAgICAgIyBQb3N0IGdhbGxlcnkgaW1hZ2VzDQrilIIgICDilJTilIDilIAgY2tlZGl0b3JfdXBsb2Fkcy8gICMgSW5saW5lIGNvbnRlbnQgaW1hZ2VzDQrilJzilIDilIAgX2NvbmZpZy55bWwgICAgICAgICAgICAjIEdpdEh1YiBQYWdlcyBjb25maWd1cmF0aW9uDQrilJzilIDilIAgX2hlYWRlcnMgICAgICAgICAgICAgICAjIENPUlMgaGVhZGVycyBmb3IgQVBJIGFjY2Vzcw0K4pSc4pSA4pSAIC5ub2pla3lsbCAgICAgICAgICAgICAgIyBCeXBhc3MgSmVreWxsIHByb2Nlc3NpbmcNCuKUlOKUgOKUgCBSRUFETUUubWQgICAgICAgICAgICAgICMgVGhpcyBkb2N1bWVudGF0aW9uDQpgYGANCg0KIyMg8J+agCBGbHV0dGVyIEludGVncmF0aW9uDQoNCiMjIyBCYXNpYyBTZXR1cA0KYGBgZGFydA0KY2xhc3MgTWxhQnJhbmRBcGlTZXJ2aWNlIHsNCiAgc3RhdGljIGNvbnN0IFN0cmluZyBiYXNlVXJsID0gJ2h0dHBzOi8vZG1vdWxpNDA4LmdpdGh1Yi5pby9tbGEtYnJhbmQnOw0KICBzdGF0aWMgY29uc3QgU3RyaW5nIHBvc3RzRW5kcG9pbnQgPSAnJGJhc2VVcmwvZGF0YS9wb3N0cy5qc29uJzsNCiAgc3RhdGljIGNvbnN0IFN0cmluZyBjb25maWdFbmRwb2ludCA9ICckYmFzZVVybC9kYXRhL2ZsdXR0ZXJfY29uZmlnLmpzb24nOw0KICANCiAgRnV0dXJlPExpc3Q8UG9zdD4+IGZldGNoUG9zdHMoKSBhc3luYyB7DQogICAgZmluYWwgcmVzcG9uc2UgPSBhd2FpdCBodHRwLmdldChVcmkucGFyc2UocG9zdHNFbmRwb2ludCkpOw0KICAgIGlmIChyZXNwb25zZS5zdGF0dXNDb2RlID09IDIwMCkgew0KICAgICAgZmluYWwgTGlzdDxkeW5hbWljPiBkYXRhID0ganNvbi5kZWNvZGUocmVzcG9uc2UuYm9keSk7DQogICAgICByZXR1cm4gZGF0YS5tYXAoKGpzb24pID0+IFBvc3QuZnJvbUpzb24oanNvbikpLnRvTGlzdCgpOw0KICAgIH0NCiAgICB0aHJvdyBFeGNlcHRpb24oJ0ZhaWxlZCB0byBsb2FkIE1MQSBCcmFuZCBwb3N0cycpOw0KICB9DQp9DQpgYGANCg0KIyMjIEltYWdlIExvYWRpbmcNCmBgYGRhcnQNCi8vIEZlYXR1cmVkIGltYWdlDQpOZXR3b3JrSW1hZ2UoJ2h0dHBzOi8vZG1vdWxpNDA4LmdpdGh1Yi5pby9tbGEtYnJhbmQvbWVkaWEvcG9zdHMveW91ci1pbWFnZS53ZWJwJykNCg0KLy8gR2FsbGVyeSBpbWFnZXMNCk5ldHdvcmtJbWFnZSgnaHR0cHM6Ly9kbW91bGk0MDguZ2l0aHViLmlvL21sYS1icmFuZC9tZWRpYS9nYWxsZXJ5L2dhbGxlcnktaW1hZ2Uud2VicCcpDQoNCi8vIENvbnRlbnQgaW1hZ2VzIChmcm9tIENLRWRpdG9yKQ0KTmV0d29ya0ltYWdlKCdodHRwczovL2Rtb3VsaTQwOC5naXRodWIuaW8vbWxhLWJyYW5kL21lZGlhL2NrZWRpdG9yX3VwbG9hZHMvY29udGVudC1pbWFnZS53ZWJwJykNCmBgYA0KDQojIyMgUG9zdCBEYXRhIFN0cnVjdHVyZQ0KYGBgZGFydA0KY2xhc3MgUG9zdCB7DQogIGZpbmFsIGludCBpZDsNCiAgZmluYWwgU3RyaW5nIHRpdGxlOw0KICBmaW5hbCBTdHJpbmcgc2x1ZzsNCiAgZmluYWwgU3RyaW5nIGNvbnRlbnQ7ICAvLyBIVE1MIGNvbnRlbnQgd2l0aCB1cGRhdGVkIGltYWdlIFVSTHMNCiAgZmluYWwgU3RyaW5nPyBmZWF0dXJlZEltYWdlOw0KICBmaW5hbCBMaXN0PEdhbGxlcnlJbWFnZT4gZ2FsbGVyeUltYWdlczsNCiAgZmluYWwgQXV0aG9yIGF1dGhvcjsNCiAgZmluYWwgQ2F0ZWdvcnk/IGNhdGVnb3J5Ow0KICBmaW5hbCBMaXN0PFRhZz4gdGFnczsNCiAgZmluYWwgU3RyaW5nIHN0YXR1czsNCiAgZmluYWwgYm9vbCBmZWF0dXJlZDsNCiAgZmluYWwgaW50IHZpZXdzOw0KICBmaW5hbCBEYXRlVGltZSBjcmVhdGVkQXQ7DQogIGZpbmFsIERhdGVUaW1lIHVwZGF0ZWRBdDsNCiAgZmluYWwgU3RyaW5nIG1ldGFUaXRsZTsNCiAgZmluYWwgU3RyaW5nIG1ldGFEZXNjcmlwdGlvbjsNCiAgZmluYWwgU3RyaW5nIG1ldGFLZXl3b3JkczsNCiAgDQogIC8vIC4uLiBmcm9tSnNvbiBjb25zdHJ1Y3Rvcg0KfQ0KYGBgDQoNCiMjIPCflIQgQXV0by1VcGRhdGUNClRoaXMgZXhwb3J0IGlzIGdlbmVyYXRlZCBhdXRvbWF0aWNhbGx5IGZyb20gdGhlIERqYW5nbyBtYW5hZ2VtZW50IGNvbW1hbmQ6DQpgYGBiYXNoDQpweXRob24gbWFuYWdlLnB5IGV4cG9ydF9wb3N0c190b19qc29uIC0tY29weS1pbWFnZXMgLS1wdWJsaXNoZWQtb25seQ0KYGBgDQoNCiMjIPCfk7EgTW9iaWxlIEFwcCBGZWF0dXJlcyBTdXBwb3J0ZWQNCi0g4pyFIENvbXBsZXRlIHBvc3QgY29udGVudCB3aXRoIEhUTUwNCi0g4pyFIEZlYXR1cmVkIGltYWdlcyBvcHRpbWl6ZWQgZm9yIG1vYmlsZQ0KLSDinIUgR2FsbGVyeSBpbWFnZXMgd2l0aCBjYXB0aW9ucw0KLSDinIUgQXV0aG9yIGFuZCBjYXRlZ29yeSBpbmZvcm1hdGlvbg0KLSDinIUgVGFncyBhbmQgU0VPIG1ldGFkYXRhDQotIOKchSBDT1JTLWVuYWJsZWQgQVBJIGVuZHBvaW50cw0KLSDinIUgV2ViUCBpbWFnZSBmb3JtYXQgZm9yIHBlcmZvcm1hbmNlDQoNCi0tLQ0KKipMYXN0IFVwZGF0ZWQqKjogMjAyNS0wNy0wMVQyMTo1OToyNi42MjQ0ODkgIA0KKipHZW5lcmF0ZWQgYnkqKjogRGphbmdvIEV4cG9ydCBNYW5hZ2VtZW50IENvbW1hbmQgIA0KKipSZXBvc2l0b3J5Kio6IGh0dHBzOi8vZ2l0aHViLmNvbS9kbW91bGk0MDgvbWxhLWJyYW5kLmdpdA0K
+# MLA Brand - Blog API Export
+
+This repository contains exported blog data and media files from the MLA Brand Django website for use with Flutter mobile applications.
+
+## 🏢 About MLA Brand
+Static API export from Django blog system, optimized for mobile app consumption.
+
+## 📊 Export Summary
+- **Export Date**: 2025-07-01T21:59:26.624489
+- **Total Posts**: 30
+- **Published Posts**: 30
+- **Total Images**: 0
+- **Repository**: https://github.com/dmouli408/mla-brand.git
+
+## 🔗 API Endpoints
+
+### Posts Data
+```
+https://dmouli408.github.io/mla-brand/data/posts.json
+```
+
+### Summary Data
+```
+https://dmouli408.github.io/mla-brand/data/summary.json
+```
+
+### Flutter Config
+```
+https://dmouli408.github.io/mla-brand/data/flutter_config.json
+```
+
+## 📁 Directory Structure
+
+```
+├── data/
+│   ├── posts.json          # All blog posts with full content
+│   ├── summary.json        # Export metadata and statistics
+│   └── flutter_config.json # Flutter app configuration
+├── media/
+│   ├── posts/             # Featured post images
+│   ├── gallery/           # Post gallery images
+│   └── ckeditor_uploads/  # Inline content images
+├── _config.yml            # GitHub Pages configuration
+├── _headers               # CORS headers for API access
+├── .nojekyll              # Bypass Jekyll processing
+└── README.md              # This documentation
+```
+
+## 🚀 Flutter Integration
+
+### Basic Setup
+```dart
+class MlaBrandApiService {
+  static const String baseUrl = 'https://dmouli408.github.io/mla-brand';
+  static const String postsEndpoint = '$baseUrl/data/posts.json';
+  static const String configEndpoint = '$baseUrl/data/flutter_config.json';
+  
+  Future<List<Post>> fetchPosts() async {
+    final response = await http.get(Uri.parse(postsEndpoint));
+    if (response.statusCode == 200) {
+      final List<dynamic> data = json.decode(response.body);
+      return data.map((json) => Post.fromJson(json)).toList();
+    }
+    throw Exception('Failed to load MLA Brand posts');
+  }
+}
+```
+
+### Image Loading
+```dart
+// Featured image
+NetworkImage('https://dmouli408.github.io/mla-brand/media/posts/your-image.webp')
+
+// Gallery images
+NetworkImage('https://dmouli408.github.io/mla-brand/media/gallery/gallery-image.webp')
+
+// Content images (from CKEditor)
+NetworkImage('https://dmouli408.github.io/mla-brand/media/ckeditor_uploads/content-image.webp')
+```
+
+### Post Data Structure
+```dart
+class Post {
+  final int id;
+  final String title;
+  final String slug;
+  final String content;  // HTML content with updated image URLs
+  final String? featuredImage;
+  final List<GalleryImage> galleryImages;
+  final Author author;
+  final Category? category;
+  final List<Tag> tags;
+  final String status;
+  final bool featured;
+  final int views;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final String metaTitle;
+  final String metaDescription;
+  final String metaKeywords;
+  
+  // ... fromJson constructor
+}
+```
+
+## 🔄 Auto-Update
+This export is generated automatically from the Django management command:
+```bash
+python manage.py export_posts_to_json --copy-images --published-only
+```
+
+## 📱 Mobile App Features Supported
+- ✅ Complete post content with HTML
+- ✅ Featured images optimized for mobile
+- ✅ Gallery images with captions
+- ✅ Author and category information
+- ✅ Tags and SEO metadata
+- ✅ CORS-enabled API endpoints
+- ✅ WebP image format for performance
+
+---
+**Last Updated**: 2025-07-01T21:59:26.624489  
+**Generated by**: Django Export Management Command  
+**Repository**: https://github.com/dmouli408/mla-brand.git
