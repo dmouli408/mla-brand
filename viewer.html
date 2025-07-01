@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View JSON from GitHub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+    }
+    select, button {
+      padding: 0.5em 1em;
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+    pre {
+      background-color: #f0f0f0;
+      padding: 1em;
+      border-radius: 6px;
+      max-height: 80vh;
+      overflow: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔎 Select a JSON file to view</h2>
+  <select id="jsonSelector">
+    <option value="flutter_config">flutter_config.json</option>
+    <option value="posts">posts.json</option>
+    <option value="summary">summary.json</option>
+  </select>
+  <button onclick="loadJSON()">Load & View</button>
+
+  <pre id="output">Please select a file and click "Load & View"</pre>
+
+  <script>
+    const urls = {
+      flutter_config: "https://dmouli408.github.io/mla-brand/data/flutter_config.json",
+      posts: "https://dmouli408.github.io/mla-brand/data/posts.json",
+      summary: "https://dmouli408.github.io/mla-brand/data/summary.json"
+    };
+
+    async function loadJSON() {
+      const selected = document.getElementById("jsonSelector").value;
+      const output = document.getElementById("output");
+
+      output.textContent = "Loading...";
+
+      try {
+        const res = await fetch(urls[selected]);
+        const base64 = await res.text();
+
+        // Base64 decode
+        const decoded = atob(base64);
+
+        // Try parsing as JSON
+        const json = JSON.parse(decoded);
+
+        output.textContent = JSON.stringify(json, null, 2);
+      } catch (err) {
+        output.textContent = "❌ Error: " + err.message;
+      }
+    }
+  </script>
+
+</body>
+</html>
