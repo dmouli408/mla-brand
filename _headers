@@ -1,13 +1,1 @@
-# MLA Brand API - CORS Headers
-/*
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: GET, POST, OPTIONS
-  Access-Control-Allow-Headers: *
-  Content-Type: application/json
-
-/data/*
-  Content-Type: application/json
-  Cache-Control: public, max-age=3600
-
-/media/*
-  Cache-Control: public, max-age=86400
+IyBNTEEgQnJhbmQgQVBJIC0gQ09SUyBIZWFkZXJzDQovKg0KICBBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW46ICoNCiAgQWNjZXNzLUNvbnRyb2wtQWxsb3ctTWV0aG9kczogR0VULCBQT1NULCBPUFRJT05TDQogIEFjY2Vzcy1Db250cm9sLUFsbG93LUhlYWRlcnM6ICoNCiAgQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uDQoNCi9kYXRhLyoNCiAgQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uDQogIENhY2hlLUNvbnRyb2w6IHB1YmxpYywgbWF4LWFnZT0zNjAwDQoNCi9tZWRpYS8qDQogIENhY2hlLUNvbnRyb2w6IHB1YmxpYywgbWF4LWFnZT04NjQwMA0K
