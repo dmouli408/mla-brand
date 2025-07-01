@@ -1,13 +1,16 @@
 {
-  "api_endpoints": {
-    "posts": "https://dmouli408.github.io/mla-brand/data/posts.json",
-    "summary": "https://dmouli408.github.io/mla-brand/data/summary.json"
+  "api_version": "1.0",
+  "base_url": "https://dmouli408.github.io/mla-brand",
+  "total_posts": 32,
+  "featured_posts": 0,
+  "last_updated": "2025-07-02T00:14:53.394948",
+  "endpoints": {
+    "posts": "data/posts.json",
+    "summary": "data/summary.json"
   },
-  "media_base_url": "https://dmouli408.github.io/mla-brand/media",
-  "website_info": {
-    "name": "MLA Brand",
-    "repository": "https://github.com/dmouli408/mla-brand.git",
-    "github_pages_url": "https://dmouli408.github.io/mla-brand"
-  },
-  "last_updated": "2025-07-02T00:11:11.564517"
+  "cache_duration": 300,
+  "pagination": {
+    "posts_per_page": 10,
+    "max_pages": 100
+  }
 }
