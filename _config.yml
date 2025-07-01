@@ -1,1 +1,29 @@
-IyBNTEEgQnJhbmQgLSBHaXRIdWIgUGFnZXMgQ29uZmlndXJhdGlvbgp0aXRsZTogTUxBIEJyYW5kIEFQSQpkZXNjcmlwdGlvbjogQmxvZyBkYXRhIEFQSSBmb3IgRmx1dHRlciBtb2JpbGUgYXBwbGljYXRpb24KdXJsOiBodHRwczovL2Rtb3VsaTQwOC5naXRodWIuaW8KYmFzZXVybDogL21sYS1icmFuZAoKIyBHaXRIdWIgUGFnZXMgc2V0dGluZ3MKcGx1Z2luczoKICAtIGpla3lsbC1yZWxhdGl2ZS1saW5rcwpyZWxhdGl2ZV9saW5rczoKICBlbmFibGVkOiB0cnVlCiAgY29sbGVjdGlvbnM6IHRydWUKaW5jbHVkZToKICAtIFJFQURNRS5tZAoKIyBDT1JTIGhlYWRlcnMgZm9yIEFQSSBlbmRwb2ludHMKcGx1Z2luczoKICAtIGpla3lsbC1jb3JzCgpjb3JzOgogIGFsbG93X29yaWdpbjogIioiCiAgYWxsb3dfbWV0aG9kczogIkdFVCwgUE9TVCwgT1BUSU9OUyIKICBhbGxvd19oZWFkZXJzOiAiKiIKCiMgRXhjbHVkZSB1bm5lY2Vzc2FyeSBmaWxlcwpleGNsdWRlOgogIC0gLmdpdGlnbm9yZQogIC0gR2VtZmlsZQogIC0gR2VtZmlsZS5sb2NrCg==
+# MLA Brand - GitHub Pages Configuration
+title: MLA Brand API
+description: Blog data API for Flutter mobile application
+url: https://dmouli408.github.io
+baseurl: /mla-brand
+
+# GitHub Pages settings
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+
+# CORS headers for API endpoints
+plugins:
+  - jekyll-cors
+
+cors:
+  allow_origin: "*"
+  allow_methods: "GET, POST, OPTIONS"
+  allow_headers: "*"
+
+# Exclude unnecessary files
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
