@@ -3,7 +3,7 @@
   "base_url": "https://dmouli408.github.io/mla-brand",
   "total_posts": 32,
   "featured_posts": 0,
-  "last_updated": "2025-07-02T00:14:53.581532",
+  "last_updated": "2025-07-02T00:25:12.130129",
   "endpoints": {
     "posts": "data/posts.json",
     "summary": "data/summary.json"
