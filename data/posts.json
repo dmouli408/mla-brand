@@ -3,19 +3,25 @@
     "id": 43,
     "title": "fyjgjkhkjhkhlk",
     "slug": "fyjgjkhkjhkhlk",
-    "summary": "fjhgukhikjlijlk",
-    "content": "<figure class=\"image image-style-align-center image_resized\" style=\"width:28.91%;\"><img style=\"aspect-ratio:899/1200;\" src=\"/media/ckeditor_uploads/gallery_7_2_19ac1e78_VjOL33T.webp\" width=\"899\" height=\"1200\"></figure><p>hjvjhgjhgjbjmbjhhfh</p>",
+    "content": "<figure class=\"image image-style-align-center image_resized\" style=\"width:28.91%;\"><img style=\"aspect-ratio:899/1200;\" src=\"https://dmouli408.github.io/mla-brand/media/ckeditor_uploads/gallery_7_2_19ac1e78_VjOL33T.webp\" width=\"899\" height=\"1200\"></figure><p>hjvjhgjhgjbjmbjhhfh</p>",
+    "excerpt": "fjhgukhikjlijlk",
     "featured_image": "https://dmouli408.github.io/mla-brand/media/posts/pexels-valeriya-1961791_kjuDWGz_1.webp",
-    "gallery": [],
+    "gallery_images": [],
+    "author": {
+      "id": 1,
+      "username": "Dmilky",
+      "first_name": "",
+      "last_name": ""
+    },
+    "category": null,
     "tags": "",
     "published": true,
     "is_featured": false,
+    "views": 0,
     "created_at": "2025-07-01T17:43:18.983163+00:00",
     "updated_at": "2025-07-01T17:59:03.901913+00:00",
-    "seo_title": "fyjgjkhkjhkhlk",
-    "seo_description": "fjhgukhikjlijlk",
-    "url": "https://dmouli408.github.io/mla-brand/posts/fyjgjkhkjhkhlk/",
-    "api_url": "https://dmouli408.github.io/mla-brand/data/posts.json"
+    "seo_title": "",
+    "seo_description": ""
   },
   {
     "id": 42,
