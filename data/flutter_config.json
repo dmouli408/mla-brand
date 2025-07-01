@@ -1,16 +1,1 @@
-{
-  "api_version": "1.0",
-  "base_url": "https://dmouli408.github.io/mla-brand",
-  "total_posts": 33,
-  "featured_posts": 0,
-  "last_updated": "2025-07-02T02:07:21.710975",
-  "endpoints": {
-    "posts": "data/posts.json",
-    "summary": "data/summary.json"
-  },
-  "cache_duration": 300,
-  "pagination": {
-    "posts_per_page": 10,
-    "max_pages": 100
-  }
-}
+ew0KICAiYXBpX2VuZHBvaW50cyI6IHsNCiAgICAicG9zdHMiOiAiaHR0cHM6Ly9kbW91bGk0MDguZ2l0aHViLmlvL21sYS1icmFuZC9kYXRhL3Bvc3RzLmpzb24iLA0KICAgICJzdW1tYXJ5IjogImh0dHBzOi8vZG1vdWxpNDA4LmdpdGh1Yi5pby9tbGEtYnJhbmQvZGF0YS9zdW1tYXJ5Lmpzb24iDQogIH0sDQogICJtZWRpYV9iYXNlX3VybCI6ICJodHRwczovL2Rtb3VsaTQwOC5naXRodWIuaW8vbWxhLWJyYW5kL21lZGlhIiwNCiAgIndlYnNpdGVfaW5mbyI6IHsNCiAgICAibmFtZSI6ICJNTEEgQnJhbmQiLA0KICAgICJyZXBvc2l0b3J5IjogImh0dHBzOi8vZ2l0aHViLmNvbS9kbW91bGk0MDgvbWxhLWJyYW5kLmdpdCIsDQogICAgImdpdGh1Yl9wYWdlc191cmwiOiAiaHR0cHM6Ly9kbW91bGk0MDguZ2l0aHViLmlvL21sYS1icmFuZCINCiAgfSwNCiAgImxhc3RfdXBkYXRlZCI6ICIyMDI1LTA3LTAxVDIxOjU5OjI2LjYyNDQ4OSINCn0=
