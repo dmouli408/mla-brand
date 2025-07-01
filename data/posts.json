@@ -829,5 +829,22 @@
     "updated_at": "2025-06-29T17:25:17.800486+00:00",
     "seo_title": "Testing mail",
     "seo_description": ""
+  },
+  {
+    "id": 44,
+    "title": "cvfxbvcbc",
+    "slug": "cvfxbvcbc",
+    "content": "<p>bb vb bb vb</p>",
+    "excerpt": "vnvbnvbn vb",
+    "featured_image": null,
+    "gallery": [],
+    "is_featured": false,
+    "is_published": true,
+    "created_date": "2025-07-01T20:15:34.650356+00:00",
+    "updated_date": "2025-07-01T20:15:34.650356+00:00",
+    "publish_date": "2025-07-01T20:15:34.650356+00:00",
+    "author": "Dmilky",
+    "tags": [],
+    "categories": []
   }
 ]
