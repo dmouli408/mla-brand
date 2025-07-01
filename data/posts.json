@@ -8,16 +8,6 @@
     "featured_image": null,
     "gallery_images": [
       {
-        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_44_1_3854696f.webp",
-        "caption": "",
-        "alt_text": ""
-      },
-      {
-        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_44_1_f9f1ad1a.webp",
-        "caption": "",
-        "alt_text": ""
-      },
-      {
         "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_44_2_c3e732bf.webp",
         "caption": "",
         "alt_text": ""
@@ -38,7 +28,7 @@
     "published": true,
     "is_featured": false,
     "created_at": "2025-07-01T20:15:34.650356+00:00",
-    "updated_at": "2025-07-01T23:14:42.854079+00:00",
+    "updated_at": "2025-07-01T23:17:07.885632+00:00",
     "views": 0,
     "read_time": 1,
     "seo_title": "",
