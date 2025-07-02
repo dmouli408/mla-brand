@@ -1,28 +1,5 @@
 [
   {
-    "id": 57,
-    "title": "Verification Delete Test",
-    "slug": "verification-delete-test",
-    "content": "This post will test actual deletion from GitHub.",
-    "summary": "",
-    "featured_image": null,
-    "gallery_images": [],
-    "author": "testuser",
-    "category": null,
-    "tags": [],
-    "published": true,
-    "is_featured": false,
-    "created_at": "2025-07-02T17:10:38.199038+00:00",
-    "updated_at": "2025-07-02T17:10:38.199038+00:00",
-    "views": 0,
-    "read_time": 1,
-    "seo_title": "",
-    "seo_description": "",
-    "youtube_url": null,
-    "video_title": "",
-    "video_description": ""
-  },
-  {
     "id": 41,
     "title": "new test 2334",
     "slug": "new-test-2334",
