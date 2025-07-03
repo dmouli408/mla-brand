@@ -57,6 +57,8 @@
       background: #ccc;
     }
     .carousel-inner img {
+      height: 200px;
+      object-fit: cover;
       cursor: pointer;
     }
   </style>
@@ -85,7 +87,7 @@
     </div>
   </div>
 
-  <!-- Image Lightbox Modal -->
+  <!-- Lightbox Modal for Zoom -->
   <div class="modal fade" id="imageLightboxModal" tabindex="-1">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content bg-dark text-white">
@@ -160,8 +162,7 @@
       document.getElementById("blogPostModalLabel").textContent = post.title;
       document.getElementById("blogPostMeta").innerHTML = `Category: ${post.category || "Uncategorized"} | Tags: ${post.tags?.join(", ") || "None"}<br/>Published on: ${new Date(post.created_at).toLocaleString()}`;
 
-      const featured = document.getElementById("blogPostFeatured");
-      featured.innerHTML = post.featured_image ? `<img src="${post.featured_image}" class="img-fluid rounded mb-3" alt="Featured" />` : "";
+      document.getElementById("blogPostFeatured").innerHTML = post.featured_image ? `<img src="${post.featured_image}" class="img-fluid rounded mb-3" alt="Featured" />` : "";
 
       const fixedContent = (post.content || "").replace(/<img[^>]+src=\"([^\"]+)\"/g, (match, src) => {
         const absoluteSrc = src.startsWith('http') ? src : `https://dmouli408.github.io/mla-brand${src.startsWith('/') ? '' : '/'}${src}`;
@@ -169,29 +170,20 @@
       });
       document.getElementById("blogPostContent").innerHTML = fixedContent || "";
 
-      const youtube = document.getElementById("blogPostYouTube");
-      youtube.innerHTML = post.youtube_url ? `<div class="ratio ratio-16x9"><iframe src="${post.youtube_url}" title="YouTube video" allowfullscreen></iframe></div>` : "";
+      document.getElementById("blogPostYouTube").innerHTML = post.youtube_url ? `<div class="ratio ratio-16x9"><iframe src="${post.youtube_url}" title="YouTube video" allowfullscreen></iframe></div>` : "";
 
       const gallery = document.getElementById("blogPostGallery");
       if (post.gallery_images?.length) {
-        const carouselId = `galleryCarousel-${post.id}`;
         gallery.innerHTML = `
           <h5 class="mb-3">Gallery</h5>
-          <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              ${post.gallery_images.map((img, index) => `
-                <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                  <img src="${img.image}" class="d-block w-100 rounded" alt="" onclick="zoomImage('${img.image}')">
-                </div>
-              `).join('')}
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>`;
+          <div class="row g-2">
+            ${post.gallery_images.map(img => `
+              <div class="col-4 col-md-3">
+                <img src="${img.image}" class="img-thumbnail" onclick="zoomImage('${img.image}')" alt="" />
+              </div>
+            `).join('')}
+          </div>
+        `;
       } else {
         gallery.innerHTML = "";
       }
