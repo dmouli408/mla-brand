@@ -56,11 +56,6 @@
     .pagination button:disabled {
       background: #ccc;
     }
-    .carousel-inner img {
-      height: 200px;
-      object-fit: cover;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -87,12 +82,22 @@
     </div>
   </div>
 
-  <!-- Lightbox Modal for Zoom -->
+  <!-- Gallery Lightbox Carousel Modal -->
   <div class="modal fade" id="imageLightboxModal" tabindex="-1">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content bg-dark text-white">
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <img id="lightboxImage" src="" class="img-fluid rounded" style="max-height: 90vh;" />
+        <div class="modal-body p-0">
+          <div id="carouselLightbox" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselInner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselLightbox" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselLightbox" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
         <div class="position-absolute top-0 end-0 p-3">
           <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
@@ -106,6 +111,7 @@
     const postsPerPage = 5;
     let allPosts = [];
     let currentPage = 1;
+    let currentGalleryImages = [];
 
     async function fetchPosts() {
       const res = await fetch("https://dmouli408.github.io/mla-brand/data/posts.json");
@@ -174,12 +180,13 @@
 
       const gallery = document.getElementById("blogPostGallery");
       if (post.gallery_images?.length) {
+        currentGalleryImages = post.gallery_images.map(img => img.image);
         gallery.innerHTML = `
           <h5 class="mb-3">Gallery</h5>
           <div class="row g-2">
-            ${post.gallery_images.map(img => `
+            ${currentGalleryImages.map((src, index) => `
               <div class="col-4 col-md-3">
-                <img src="${img.image}" class="img-thumbnail" onclick="zoomImage('${img.image}')" alt="" />
+                <img src="${src}" class="img-thumbnail" onclick="openGalleryModal(${index})" alt="" />
               </div>
             `).join('')}
           </div>
@@ -191,8 +198,16 @@
       new bootstrap.Modal(document.getElementById('blogPostModal')).show();
     }
 
-    function zoomImage(src) {
-      document.getElementById("lightboxImage").src = src;
+    function openGalleryModal(startIndex) {
+      const carouselInner = document.getElementById("carouselInner");
+      carouselInner.innerHTML = currentGalleryImages.map((src, i) => `
+        <div class="carousel-item ${i === startIndex ? 'active' : ''}">
+          <div class="d-flex justify-content-center align-items-center" style="height:100vh;">
+            <img src="${src}" class="img-fluid rounded" style="max-height:90vh; max-width:90vw;" alt="Gallery Image ${i + 1}" />
+          </div>
+        </div>
+      `).join('');
+
       new bootstrap.Modal(document.getElementById("imageLightboxModal")).show();
     }
 
