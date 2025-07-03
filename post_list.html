@@ -56,6 +56,18 @@
     .pagination button:disabled {
       background: #ccc;
     }
+    .gallery-thumbnails {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+    }
+    .gallery-thumbnails img {
+      width: 100px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -183,11 +195,9 @@
         currentGalleryImages = post.gallery_images.map(img => img.image);
         gallery.innerHTML = `
           <h5 class="mb-3">Gallery</h5>
-          <div class="row g-2">
+          <div class="gallery-thumbnails">
             ${currentGalleryImages.map((src, index) => `
-              <div class="col-4 col-md-3">
-                <img src="${src}" class="img-thumbnail" onclick="openGalleryModal(${index})" alt="" />
-              </div>
+              <img src="${src}" onclick="openGalleryModal(${index})" alt="" />
             `).join('')}
           </div>
         `;
