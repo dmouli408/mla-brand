@@ -94,6 +94,12 @@
       border-radius: 0.5rem;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -229,7 +235,7 @@
       });
       document.getElementById("blogPostContent").innerHTML = fixedContent || "";
 
-      document.getElementById("blogPostYouTube").innerHTML = post.youtube_url ? `<div class="ratio ratio-16x9"><iframe src="${post.youtube_url}" title="YouTube video" allowfullscreen></iframe></div>` : "";
+      document.getElementById("blogPostYouTube").innerHTML = post.youtube_url ? `<div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/${extractYouTubeID(post.youtube_url)}" title="YouTube video" allowfullscreen></iframe></div>` : "";
 
       const gallery = document.getElementById("blogPostGallery");
       if (post.gallery_images?.length) {
@@ -247,6 +253,12 @@
       }
 
       new bootstrap.Modal(document.getElementById('blogPostModal')).show();
+    }
+
+    function extractYouTubeID(url) {
+      const regExp = /^.*(?:youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+      const match = url.match(regExp);
+      return (match && match[1].length === 11) ? match[1] : null;
     }
 
     function openGalleryModal(startIndex) {
