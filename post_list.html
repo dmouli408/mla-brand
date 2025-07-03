@@ -137,7 +137,47 @@
         height: 180px;
       }
     }
+
+    /* CKEditor Inline Image Styles */
+
+.modal-content figure.image {
+  display: table;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.modal-content figure.image-style-align-left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.modal-content figure.image-style-align-right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.modal-content figure.image-style-align-center {
+  display: table;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.modal-content figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Optional for cleaner layout */
+.modal-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
   </style>
+
+  
 </head>
 <body>
 
