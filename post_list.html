@@ -25,7 +25,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1em;
-      padding: 0;
     }
 
     .post-card {
@@ -81,8 +80,10 @@
     /* Modal */
     .modal {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: rgba(0,0,0,0.6);
       display: none;
       align-items: center;
@@ -92,7 +93,7 @@
 
     .modal-content {
       background: white;
-      max-width: 600px;
+      max-width: 800px;
       width: 95%;
       max-height: 90%;
       overflow: auto;
@@ -108,6 +109,27 @@
       font-size: 1.5em;
       cursor: pointer;
       color: #888;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .modal-content figure.image-style-align-right {
+      float: right;
+      margin-left: 10px;
+      width: auto;
+    }
+
+    .modal-content figure.image-style-align-left {
+      float: left;
+      margin-right: 10px;
+      width: auto;
+    }
+
+    .modal-content figure {
+      margin: 1em 0;
     }
 
     @media (max-width: 600px) {
@@ -194,13 +216,21 @@
       const modal = document.getElementById("postModal");
       const body = document.getElementById("modalBody");
 
+      // Convert relative image src to absolute GitHub Pages path
+      const fixedContent = post.content.replace(/<img[^>]+src="([^"]+)"/g, (match, src) => {
+        const absoluteSrc = src.startsWith('http')
+          ? src
+          : `https://dmouli408.github.io/mla-brand${src.startsWith('/') ? '' : '/'}${src}`;
+        return match.replace(src, absoluteSrc);
+      });
+
       body.innerHTML = `
         <h2>${post.title}</h2>
         <div style="color:#888; margin-bottom:1em;">
-          Category: ${post.category} | Tags: ${post.tags.join(", ")}<br/>
+          Category: ${post.category || "Uncategorized"} | Tags: ${post.tags?.join(", ") || "None"}<br/>
           Published on: ${new Date(post.created_at).toLocaleString()}
         </div>
-        <div>${post.content}</div>
+        <div>${fixedContent}</div>
         ${post.gallery_images?.length > 0 ? '<h4>Gallery:</h4>' : ''}
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           ${post.gallery_images?.map(img => `<img src="${img.image}" alt="" style="width:100px; border-radius:4px;" />`).join("") || ""}
@@ -214,7 +244,7 @@
       document.getElementById("postModal").style.display = "none";
     }
 
-    // Start
+    // Initialize
     fetchPosts();
   </script>
 
