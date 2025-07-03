@@ -3,7 +3,7 @@
     "id": 59,
     "title": "new test post for 8143",
     "slug": "new-test-post-for-8143",
-    "content": "<p>this is test post and imp message&nbsp;<br><br>&nbsp;</p><figure class=\"image image-style-align-left image_resized\" style=\"width:25%;\"><img style=\"aspect-ratio:865/1024;\" src=\"/media/ckeditor_uploads/screencapture-onlinesbi-sbi-sbicollect-fsssuccessresponseredirect-htm-2025-06-29-12_06_35_IDPt1fa.webp\" width=\"865\" height=\"1024\"></figure><figure class=\"image image-style-align-right image_resized\" style=\"width:25%;\"><img style=\"aspect-ratio:1200/628;\" src=\"/media/ckeditor_uploads/Screenshot_2025-06-27-23-11-14-74_6012fa4d4ddec268fc5c7112cbb265e7_2.webp\" width=\"1200\" height=\"628\"></figure>",
+    "content": "<p>this is test post and imp message&nbsp;<br><br>&nbsp;</p><p>&nbsp;</p><figure class=\"image image-style-align-right image_resized\" style=\"width:25%;\"><img style=\"aspect-ratio:1200/628;\" src=\"/media/ckeditor_uploads/Screenshot_2025-06-27-23-11-14-74_6012fa4d4ddec268fc5c7112cbb265e7_2.webp\" width=\"1200\" height=\"628\"></figure>",
     "summary": "this is test post for 8143",
     "featured_image": "https://dmouli408.github.io/mla-brand/media/posts/ChatGPT_Image_Jun_22_2025_10_30_50_PM_maYLtuc_7NA6zZj_1_MyeIfck.webp",
     "gallery_images": [
@@ -31,11 +31,6 @@
         "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_59_5.webp",
         "caption": "",
         "alt_text": ""
-      },
-      {
-        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_59_6.webp",
-        "caption": "",
-        "alt_text": ""
       }
     ],
     "author": "Dmilky",
@@ -44,12 +39,12 @@
     "published": true,
     "is_featured": true,
     "created_at": "2025-07-03T06:00:16.556841+00:00",
-    "updated_at": "2025-07-03T06:00:16.556841+00:00",
+    "updated_at": "2025-07-03T06:05:20.869735+00:00",
     "views": 0,
     "read_time": 1,
     "seo_title": "",
     "seo_description": "",
-    "youtube_url": "",
+    "youtube_url": "https://youtu.be/360Cwsp1mEE?si=g_DiqsK_fLF32HwH",
     "video_title": "",
     "video_description": ""
   },
