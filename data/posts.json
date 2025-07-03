@@ -1,5 +1,64 @@
 [
   {
+    "id": 60,
+    "title": "this is test mail service to make test how create gonna work",
+    "slug": "this-is-test-mail-service-to-make-test-how-create-gonna-work",
+    "content": "<p>this test is for testing the how images and data should be updated via signals and how it can be modified and how it can be upated via native static images so make it perfect&nbsp;<br><br>&nbsp;</p><figure class=\"image image-style-align-center image_resized\" style=\"width:25%;\"><img style=\"aspect-ratio:865/1024;\" src=\"/media/ckeditor_uploads/screencapture-onlinesbi-sbi-sbicollect-fsssuccessresponseredirect-htm-2025-06-29-12_06_35_8mn8Lx2.webp\" width=\"865\" height=\"1024\"></figure>",
+    "summary": "this is test mail service to make test how create gonna work",
+    "featured_image": "https://dmouli408.github.io/mla-brand/media/posts/ChatGPT_Image_Jun_22_2025_10_30_50_PM_1.webp",
+    "gallery_images": [
+      {
+        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_60_1.webp",
+        "caption": "",
+        "alt_text": ""
+      },
+      {
+        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_60_2.webp",
+        "caption": "",
+        "alt_text": ""
+      },
+      {
+        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_60_3.webp",
+        "caption": "",
+        "alt_text": ""
+      },
+      {
+        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_60_4.webp",
+        "caption": "",
+        "alt_text": ""
+      },
+      {
+        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_60_5.webp",
+        "caption": "",
+        "alt_text": ""
+      },
+      {
+        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_60_6.webp",
+        "caption": "",
+        "alt_text": ""
+      },
+      {
+        "image": "https://dmouli408.github.io/mla-brand/media/gallery/gallery_60_7.webp",
+        "caption": "",
+        "alt_text": ""
+      }
+    ],
+    "author": "Dmilky",
+    "category": "Test Category",
+    "tags": [],
+    "published": true,
+    "is_featured": false,
+    "created_at": "2025-07-03T06:22:06.513506+00:00",
+    "updated_at": "2025-07-03T06:22:06.513506+00:00",
+    "views": 0,
+    "read_time": 1,
+    "seo_title": "",
+    "seo_description": "",
+    "youtube_url": "",
+    "video_title": "",
+    "video_description": ""
+  },
+  {
     "id": 58,
     "title": "this is new tst messges for final test",
     "slug": "this-is-new-tst-messges-for-final-test",
