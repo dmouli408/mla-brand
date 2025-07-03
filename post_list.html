@@ -7,9 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -42,14 +39,6 @@
       padding: 1em;
       flex-grow: 1;
     }
-    .post-content h3 {
-      margin: 0 0 0.5em;
-    }
-    .post-meta {
-      font-size: 0.9em;
-      color: #666;
-      margin-bottom: 0.5em;
-    }
     .pagination {
       text-align: center;
       margin-top: 2em;
@@ -67,11 +56,6 @@
     .pagination button:disabled {
       background: #ccc;
     }
-    @media (max-width: 600px) {
-      .post-card img {
-        height: 180px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -79,7 +63,7 @@
   <div class="posts-container" id="posts"></div>
   <div class="pagination" id="pagination"></div>
 
-  <!-- Bootstrap Modal -->
+  <!-- Post Modal -->
   <div class="modal fade" id="blogPostModal" tabindex="-1" aria-labelledby="blogPostModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable">
       <div class="modal-content">
@@ -89,8 +73,10 @@
         </div>
         <div class="modal-body">
           <div id="blogPostMeta" class="text-muted small mb-3"></div>
-          <div id="blogPostContent"></div>
-          <div id="blogPostGallery" class="pt-4"></div>
+          <div id="blogPostFeatured" class="mb-4"></div>
+          <div id="blogPostContent" class="mb-4"></div>
+          <div id="blogPostYouTube" class="mb-4"></div>
+          <div id="blogPostGallery" class="mb-4"></div>
         </div>
       </div>
     </div>
@@ -168,40 +154,35 @@
     }
 
     function openPostInStyledModal(post) {
-      const title = document.getElementById("blogPostModalLabel");
-      const content = document.getElementById("blogPostContent");
-      const meta = document.getElementById("blogPostMeta");
-      const gallery = document.getElementById("blogPostGallery");
+      document.getElementById("blogPostModalLabel").textContent = post.title;
+      document.getElementById("blogPostMeta").innerHTML = `Category: ${post.category || "Uncategorized"} | Tags: ${post.tags?.join(", ") || "None"}<br/>Published on: ${new Date(post.created_at).toLocaleString()}`;
 
-      title.textContent = post.title;
-      meta.innerHTML = `Category: ${post.category || "Uncategorized"} | Tags: ${post.tags?.join(", ") || "None"}<br/>Published on: ${new Date(post.created_at).toLocaleString()}`;
+      const featured = document.getElementById("blogPostFeatured");
+      featured.innerHTML = post.featured_image ? `<img src="${post.featured_image}" class="img-fluid rounded mb-3" alt="Featured" />` : "";
 
       const fixedContent = (post.content || "").replace(/<img[^>]+src=\"([^\"]+)\"/g, (match, src) => {
         const absoluteSrc = src.startsWith('http') ? src : `https://dmouli408.github.io/mla-brand${src.startsWith('/') ? '' : '/'}${src}`;
         return match.replace(src, absoluteSrc);
       });
-      content.innerHTML = fixedContent;
+      document.getElementById("blogPostContent").innerHTML = fixedContent || "";
 
-      if (post.gallery_images?.length) {
-        gallery.innerHTML = `<h5 class="mb-3">Gallery</h5><div class="row g-2">` +
-          post.gallery_images.map(img => `
-            <div class="col-4 col-md-3">
-              <img src="${img.image}" class="img-fluid rounded shadow-sm" onclick="zoomImage('${img.image}')" alt="" />
-            </div>
-          `).join('') +
-          `</div>`;
-      } else {
-        gallery.innerHTML = "";
-      }
+      const youtube = document.getElementById("blogPostYouTube");
+      youtube.innerHTML = post.youtube_url ? `<div class="ratio ratio-16x9"><iframe src="${post.youtube_url}" title="YouTube video" allowfullscreen></iframe></div>` : "";
 
-      const modal = new bootstrap.Modal(document.getElementById('blogPostModal'));
-      modal.show();
+      const gallery = document.getElementById("blogPostGallery");
+      gallery.innerHTML = post.gallery_images?.length ? `<h5 class="mb-3">Gallery</h5><div class="row g-2">` +
+        post.gallery_images.map(img => `
+          <div class="col-4 col-md-3">
+            <img src="${img.image}" class="img-fluid rounded shadow-sm" onclick="zoomImage('${img.image}')" alt="" />
+          </div>
+        `).join('') + `</div>` : "";
+
+      new bootstrap.Modal(document.getElementById('blogPostModal')).show();
     }
 
     function zoomImage(src) {
       document.getElementById("lightboxImage").src = src;
-      const modal = new bootstrap.Modal(document.getElementById("imageLightboxModal"));
-      modal.show();
+      new bootstrap.Modal(document.getElementById("imageLightboxModal")).show();
     }
 
     fetchPosts();
