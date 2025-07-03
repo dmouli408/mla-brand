@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <!-- Lightbox2 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
-<!-- Lightbox2 JS -->
-<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-
-  
 <head>
   <meta charset="UTF-8" />
   <title>MLA Blog Posts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     * {
       box-sizing: border-box;
@@ -121,6 +115,7 @@
     .modal-content img {
       max-width: 100%;
       height: auto;
+      cursor: zoom-in;
     }
 
     .modal-content figure.image-style-align-right {
@@ -134,6 +129,7 @@
       margin-right: 10px;
       width: auto;
     }
+
     .modal-content h4 {
       margin-top: 2em;
       font-size: 1.1em;
@@ -141,8 +137,96 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 0.3em;
     }
+
     .modal-content figure {
       margin: 1em 0;
+    }
+
+    .modal-content figure.image {
+      display: table;
+      margin: 1em auto;
+      text-align: center;
+    }
+
+    .modal-content figure.image-style-align-center {
+      display: table;
+      margin: 1em auto;
+      text-align: center;
+    }
+
+    .modal-content::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    /* Carousel Styles */
+    .carousel-container {
+      position: relative;
+      margin-top: 1.5em;
+      padding: 10px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 10px;
+      padding: 5px;
+    }
+
+    .carousel-item img {
+      height: 100px;
+      border-radius: 6px;
+      object-fit: cover;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .carousel-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      padding: 0 10px;
+      z-index: 10;
+      opacity: 0.7;
+      border-radius: 5px;
+    }
+
+    .carousel-btn.left {
+      left: 0;
+    }
+
+    .carousel-btn.right {
+      right: 0;
+    }
+
+    /* Zoom Lightbox */
+    .zoom-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      display: none;
+    }
+
+    .zoom-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      cursor: zoom-out;
+      border-radius: 10px;
     }
 
     @media (max-width: 600px) {
@@ -150,48 +234,9 @@
         height: 180px;
       }
     }
-
-    /* CKEditor Inline Image Styles */
-
-.modal-content figure.image {
-  display: table;
-  margin: 1em auto;
-  text-align: center;
-}
-
-.modal-content figure.image-style-align-left {
-  float: left;
-  margin: 0 1em 1em 0;
-}
-
-.modal-content figure.image-style-align-right {
-  float: right;
-  margin: 0 0 1em 1em;
-}
-
-.modal-content figure.image-style-align-center {
-  display: table;
-  margin: 1em auto;
-  text-align: center;
-}
-
-.modal-content figure img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* Optional for cleaner layout */
-.modal-content::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
   </style>
-
-  
 </head>
+
 <body>
 
   <h1>📰 MLA Blog Posts</h1>
@@ -206,10 +251,16 @@
     </div>
   </div>
 
+  <!-- Image Zoom Overlay -->
+  <div class="zoom-overlay" id="zoomOverlay" onclick="closeZoom()">
+    <img id="zoomImage" src="" alt="Zoomed" />
+  </div>
+
   <script>
     const postsPerPage = 5;
     let allPosts = [];
     let currentPage = 1;
+    let currentCarouselIndex = 0;
 
     async function fetchPosts() {
       const res = await fetch("https://dmouli408.github.io/mla-brand/data/posts.json");
@@ -269,13 +320,29 @@
       const modal = document.getElementById("postModal");
       const body = document.getElementById("modalBody");
 
-      // Convert relative image src to absolute GitHub Pages path
       const fixedContent = post.content.replace(/<img[^>]+src="([^"]+)"/g, (match, src) => {
         const absoluteSrc = src.startsWith('http')
           ? src
           : `https://dmouli408.github.io/mla-brand${src.startsWith('/') ? '' : '/'}${src}`;
         return match.replace(src, absoluteSrc);
       });
+
+      const galleryHTML = post.gallery_images?.length
+        ? `
+          <h4>Gallery:</h4>
+          <div class="carousel-container">
+            <button class="carousel-btn left" onclick="moveCarousel(-1)">❮</button>
+            <div class="carousel-track" id="carouselTrack">
+              ${post.gallery_images.map((img, index) => `
+                <div class="carousel-item">
+                  <img src="${img.image}" alt="Gallery Image ${index + 1}" onclick="zoomImage('${img.image}')" />
+                </div>
+              `).join('')}
+            </div>
+            <button class="carousel-btn right" onclick="moveCarousel(1)">❯</button>
+          </div>
+        `
+        : '';
 
       body.innerHTML = `
         <h2>${post.title}</h2>
@@ -284,29 +351,51 @@
           Published on: ${new Date(post.created_at).toLocaleString()}
         </div>
         <div>${fixedContent}</div>
-        ${post.gallery_images?.length > 0 ? '<h4>Gallery:</h4>' : ''}
-        <div style="margin-top: 2em;">
-          <h4 style="margin-bottom: 0.5em;">Gallery:</h4>
-          <div style="display:flex; flex-wrap:wrap; gap:10px;">
-            ${
-              post.gallery_images?.map((img, index) => `
-                <a href="${img.image}" data-lightbox="gallery-${post.id}" data-title="${img.caption || ''}">
-                  <img src="${img.image}" alt="Gallery Image ${index + 1}" style="width:100px; border-radius:4px;" />
-                </a>
-              `).join('') || ''
-            }
-          </div>
-        </div>
+        ${galleryHTML}
       `;
 
       modal.style.display = "flex";
+      currentCarouselIndex = 0;
+      updateCarousel();
     }
 
     function closeModal() {
       document.getElementById("postModal").style.display = "none";
     }
 
-    // Initialize
+    function moveCarousel(direction) {
+      const track = document.getElementById("carouselTrack");
+      const items = track.querySelectorAll(".carousel-item");
+      if (!items.length) return;
+
+      currentCarouselIndex = Math.max(0, Math.min(items.length - 1, currentCarouselIndex + direction));
+      const scrollAmount = items[currentCarouselIndex].offsetLeft;
+      track.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }
+
+    function updateCarousel() {
+      moveCarousel(0);
+    }
+
+    function zoomImage(src) {
+      const overlay = document.getElementById("zoomOverlay");
+      const img = document.getElementById("zoomImage");
+      img.src = src;
+      overlay.style.display = "flex";
+    }
+
+    function closeZoom() {
+      document.getElementById("zoomOverlay").style.display = "none";
+    }
+
+    // Close modal on Esc key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === "Escape") {
+        closeModal();
+        closeZoom();
+      }
+    });
+
     fetchPosts();
   </script>
 
