@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <!-- Lightbox2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+<!-- Lightbox2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+
+  
 <head>
   <meta charset="UTF-8" />
   <title>MLA Blog Posts</title>
@@ -127,7 +134,13 @@
       margin-right: 10px;
       width: auto;
     }
-
+    .modal-content h4 {
+      margin-top: 2em;
+      font-size: 1.1em;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3em;
+    }
     .modal-content figure {
       margin: 1em 0;
     }
@@ -272,8 +285,17 @@
         </div>
         <div>${fixedContent}</div>
         ${post.gallery_images?.length > 0 ? '<h4>Gallery:</h4>' : ''}
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          ${post.gallery_images?.map(img => `<img src="${img.image}" alt="" style="width:100px; border-radius:4px;" />`).join("") || ""}
+        <div style="margin-top: 2em;">
+          <h4 style="margin-bottom: 0.5em;">Gallery:</h4>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            ${
+              post.gallery_images?.map((img, index) => `
+                <a href="${img.image}" data-lightbox="gallery-${post.id}" data-title="${img.caption || ''}">
+                  <img src="${img.image}" alt="Gallery Image ${index + 1}" style="width:100px; border-radius:4px;" />
+                </a>
+              `).join('') || ''
+            }
+          </div>
         </div>
       `;
 
