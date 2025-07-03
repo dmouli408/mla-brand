@@ -56,6 +56,9 @@
     .pagination button:disabled {
       background: #ccc;
     }
+    .carousel-inner img {
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -170,12 +173,28 @@
       youtube.innerHTML = post.youtube_url ? `<div class="ratio ratio-16x9"><iframe src="${post.youtube_url}" title="YouTube video" allowfullscreen></iframe></div>` : "";
 
       const gallery = document.getElementById("blogPostGallery");
-      gallery.innerHTML = post.gallery_images?.length ? `<h5 class="mb-3">Gallery</h5><div class="row g-2">` +
-        post.gallery_images.map(img => `
-          <div class="col-4 col-md-3">
-            <img src="${img.image}" class="img-fluid rounded shadow-sm" onclick="zoomImage('${img.image}')" alt="" />
-          </div>
-        `).join('') + `</div>` : "";
+      if (post.gallery_images?.length) {
+        const carouselId = `galleryCarousel-${post.id}`;
+        gallery.innerHTML = `
+          <h5 class="mb-3">Gallery</h5>
+          <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              ${post.gallery_images.map((img, index) => `
+                <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                  <img src="${img.image}" class="d-block w-100 rounded" alt="" onclick="zoomImage('${img.image}')">
+                </div>
+              `).join('')}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>`;
+      } else {
+        gallery.innerHTML = "";
+      }
 
       new bootstrap.Modal(document.getElementById('blogPostModal')).show();
     }
