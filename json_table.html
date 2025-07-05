@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON to Editable Table & Excel</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+      table-layout: fixed;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px;
+      font-size: 14px;
+    }
+    input {
+      width: 100%;
+      border: none;
+      background: transparent;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📋 Paste JSON Data</h2>
+<textarea id="jsonInput" placeholder='Paste {"DataList": [...] } format JSON here'></textarea>
+<br>
+<button onclick="renderTable()">Convert to Table</button>
+<button onclick="downloadExcel()">Download Excel</button>
+
+<div id="tableContainer"></div>
+
+<script>
+  let headers = [];
+
+  function renderTable() {
+    const container = document.getElementById("tableContainer");
+    container.innerHTML = ""; // Clear previous table
+
+    let jsonText = document.getElementById("jsonInput").value;
+    let jsonData;
+
+    try {
+      jsonData = JSON.parse(jsonText);
+    } catch (e) {
+      alert("Invalid JSON data!");
+      return;
+    }
+
+    if (!jsonData.DataList || !Array.isArray(jsonData.DataList)) {
+      alert("JSON must have a 'DataList' array.");
+      return;
+    }
+
+    const data = jsonData.DataList;
+    if (data.length === 0) {
+      alert("DataList is empty.");
+      return;
+    }
+
+    const table = document.createElement("table");
+    const thead = document.createElement("thead");
+    const trHead = document.createElement("tr");
+
+    headers = Object.keys(data[0]);
+    headers.forEach(key => {
+      const th = document.createElement("th");
+      th.innerText = key;
+      trHead.appendChild(th);
+    });
+    thead.appendChild(trHead);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+    data.forEach((item, rowIndex) => {
+      const tr = document.createElement("tr");
+      headers.forEach(key => {
+        const td = document.createElement("td");
+        const input = document.createElement("input");
+        input.value = item[key] !== null ? item[key] : '';
+        input.dataset.row = rowIndex;
+        input.dataset.key = key;
+        td.appendChild(input);
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    container.appendChild(table);
+  }
+
+  function downloadExcel() {
+    const rows = document.querySelectorAll("table tbody tr");
+    if (rows.length === 0) {
+      alert("No data to export. Paste JSON and generate table first.");
+      return;
+    }
+
+    const data = [];
+
+    rows.forEach(row => {
+      const rowData = {};
+      const inputs = row.querySelectorAll("input");
+      inputs.forEach((input, index) => {
+        rowData[headers[index]] = input.value;
+      });
+      data.push(rowData);
+    });
+
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
+    XLSX.writeFile(workbook, "data_from_json.xlsx");
+  }
+</script>
+
+</body>
+</html>
