@@ -904,7 +904,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Mouli Penumala** - *Initial work* - [dmouli408](https://github.com/dmouli408)
+- **Dasari Mouli** - *Initial work* - [dmouli408](https://github.com/dmouli408)
 
 ## 🙏 Acknowledgments
 
