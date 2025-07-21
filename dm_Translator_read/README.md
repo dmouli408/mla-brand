@@ -68,6 +68,14 @@ DM Translator is a comprehensive Django web application that provides powerful E
 - **Multi-format Downloads**: TXT, DOCX, and Anu Script format support
 - **Unicode Conversion**: Telugu to Devanagari and Anu Script conversion tools
 - **File Type Badges**: Visual indicators for different document types
+- **Advanced Navigation**: Beautiful gradient navbar with animated hover effects
+- **User Profile Dropdown**: Complete user management with profile and settings access
+- **Toast Notifications**: Success/error messages with auto-dismiss functionality
+- **Loading Animations**: Sophisticated processing indicators with step-by-step progress
+- **Resizable Columns**: Interactive table columns with drag-and-resize functionality
+- **Character Counter**: Real-time character counting with color-coded warnings
+- **Quick Actions**: Paste, clear, and sample text loading for faster workflow
+- **Method Selection Cards**: Visual selection interface for translation and dataset creation methods
 
 ### 🔧 Technical Features
 - **IndicTrans2 Integration**: Primary model (ai4bharat/indictrans2-en-indic-1B)
@@ -117,11 +125,41 @@ DM Translator is a comprehensive Django web application that provides powerful E
 - **Network**: Stable internet connection, domain name
 
 ### Software Dependencies
+**Core Framework:**
 - Python 3.8+
 - Django 5.2.4
 - PostgreSQL 12+ (production)
 - Git
 - Virtual environment support
+
+**Machine Learning & NLP:**
+- PyTorch 2.7.1
+- Transformers 4.53.1
+- Tokenizers 0.21.2
+- HuggingFace Hub 0.33.2
+- NumPy 2.2.6
+- Pandas 2.3.0
+- NLTK 3.9.1
+
+**Indic Language Support:**
+- indic-nlp-library 0.92
+- indic-transliteration 2.3.69
+
+**Document Processing:**
+- PyPDF2 3.0.1
+- python-docx 1.2.0
+- pdf2image 1.17.0
+- pytesseract 0.3.13
+- Pillow 11.3.0
+- PyMuPDF 1.24.7
+- BeautifulSoup4 4.12.3
+
+**Production Stack:**
+- Gunicorn 21.2.0
+- WhiteNoise 6.6.0
+- psycopg2-binary 2.9.9
+
+**System Dependencies:**
 - Tesseract OCR
 - Poppler utilities
 
@@ -1326,3 +1364,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **🌟 Star the Project**: If DM Translator helps you, please star the repository to support development!
 
 **🔄 Stay Updated**: Watch the repository for new releases and updates.
+
+---
+
+## 🌟 Star this project if it helped you!
+[![GitHub stars](https://img.shields.io/github/stars/dmouli408/DM_Translator.svg?style=social&label=Star)](https://github.com/dmouli408/DM_Translator)
+[![GitHub forks](https://img.shields.io/github/forks/dmouli408/DM_Translator.svg?style=social&label=Fork)](https://github.com/dmouli408/DM_Translator)
+
+## Made with ❤️ by Dasari Mouli
+**Panchayat Secretary Gr-VI (Digital Assistant)**  
+Edupugallu-2 Secretariat, Kankipadu Mandal, Krishna District
+
+*This project was developed independently as a personal initiative to provide quality AI-powered English to Telugu translation services.*
