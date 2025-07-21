@@ -1,43 +1,404 @@
-# DM Translator - Professional AI Translation System 🌏
+<div align="center">
 
-🚀 **Complete Django-based translation system using IndicTrans2 for accurate English to Telugu translation with comprehensive management features**
+# 🌏 DM Translator
+### ✨ Professional AI Translation System ✨
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🚀_Django-5.2.4-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django">
+  <img src="https://img.shields.io/badge/🐍_Python-3.10.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/🤖_AI-IndicTrans2-FF6B6B?style=for-the-badge&logo=artificial-intelligence&logoColor=white" alt="AI">
+  <img src="https://img.shields.io/badge/📜_License-MIT-green?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/⭐_Production_Ready-YES-4CAF50?style=for-the-badge&logo=checkmarx&logoColor=white" alt="Production Ready">
+  <img src="https://img.shields.io/badge/🇮🇳_Language-Telugu-FF9800?style=for-the-badge&logo=google-translate&logoColor=white" alt="Telugu">
+  <img src="https://img.shields.io/badge/🔥_AI_Powered-IndicTrans2-E91E63?style=for-the-badge&logo=tensorflow&logoColor=white" alt="AI Powered">
+</p>
+
+<p align="center">
+  <strong>🎯 Complete Django-based translation system using IndicTrans2 for accurate English to Telugu translation with comprehensive management features</strong>
+</p>
+
+<p align="center">
+  <a href="#-quick-start">
+    <img src="https://img.shields.io/badge/🚀_Quick_Start-4CAF50?style=for-the-badge&logo=rocket&logoColor=white" alt="Quick Start">
+  </a>
+  <a href="#-features">
+    <img src="https://img.shields.io/badge/⭐_Features-2196F3?style=for-the-badge&logo=star&logoColor=white" alt="Features">
+  </a>
+  <a href="#-deployment-manual">
+    <img src="https://img.shields.io/badge/🌐_Deploy-FF9800?style=for-the-badge&logo=vercel&logoColor=white" alt="Deploy">
+  </a>
+  <a href="https://github.com/dmouli408/dm_translator/issues">
+    <img src="https://img.shields.io/badge/💬_Support-E91E63?style=for-the-badge&logo=discourse&logoColor=white" alt="Support">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/dmouli408/dm_translator?style=for-the-badge&logo=github&color=yellow" alt="Stars">
+  <img src="https://img.shields.io/github/forks/dmouli408/dm_translator?style=for-the-badge&logo=github&color=blue" alt="Forks">
+  <img src="https://img.shields.io/github/watchers/dmouli408/dm_translator?style=for-the-badge&logo=github&color=green" alt="Watchers">
+</p>
+
+---
+
+</div>
+
+<div align="center">
 
 ## 📋 Table of Contents
 
-1. [Overview](#-overview)
-2. [Features](#-features)
-3. [System Requirements](#-system-requirements)
-4. [Quick Start](#-quick-start)
-5. [Admin Manual](#-admin-manual)
-6. [User Manual](#-user-manual)  
-7. [Deployment Manual](#-deployment-manual)
-8. [Usage Manual](#-usage-manual)
-9. [Troubleshooting](#-troubleshooting)
-10. [Performance Optimization](#-performance-optimization)
-11. [Support & Contributing](#-support--contributing)
+</div>
+
+<table align="center">
+<tr>
+<td align="center" width="20%">
+
+**🎯 [Overview](#-overview)**
+*Project Introduction*
+
+</td>
+<td align="center" width="20%">
+
+**⭐ [Features](#-features)**
+*Core Capabilities*
+
+</td>
+<td align="center" width="20%">
+
+**📋 [Requirements](#-system-requirements)**
+*System Setup*
+
+</td>
+<td align="center" width="20%">
+
+**🚀 [Quick Start](#-quick-start)**
+*Getting Started*
+
+</td>
+<td align="center" width="20%">
+
+**👨‍💼 [Admin Manual](#-admin-manual)**
+*Management Guide*
+
+</td>
+</tr>
+<tr>
+<td align="center" width="20%">
+
+**👤 [User Manual](#-user-manual)**
+*User Guide*
+
+</td>
+<td align="center" width="20%">
+
+**🌐 [Deployment](#-deployment-manual)**
+*Production Setup*
+
+</td>
+<td align="center" width="20%">
+
+**📖 [Usage Manual](#-usage-manual)**
+*API & Commands*
+
+</td>
+<td align="center" width="20%">
+
+**🔧 [Troubleshooting](#-troubleshooting)**
+*Problem Solving*
+
+</td>
+<td align="center" width="20%">
+
+**⚡ [Performance](#-performance-optimization)**
+*Optimization*
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+**🤝 [Support & Contributing](#-support--contributing)**
+
+</div>
+
+<div align="center">
 
 ## 🎯 Overview
 
-DM Translator is a comprehensive Django web application that provides powerful English to Telugu translation capabilities along with training data management features. Built with the state-of-the-art **IndicTrans2** model from AI4Bharat, it offers superior translation quality specifically designed for Indian languages.
+<img src="https://img.shields.io/badge/🚀_Built_with-Django_5.2.4-092E20?style=flat-square&logo=django" alt="Built with Django">
+<img src="https://img.shields.io/badge/🤖_Powered_by-IndicTrans2-FF6B6B?style=flat-square&logo=artificial-intelligence" alt="Powered by IndicTrans2">
+<img src="https://img.shields.io/badge/🇮🇳_Language-Telugu-FF9800?style=flat-square&logo=google-translate" alt="Telugu Language">
 
-### Core Capabilities
-1. **🔄 Translation Services**: PDF upload and direct text translation
-2. **📚 Training Data Management**: Create, edit, and manage translation datasets  
-3. **👥 User Management**: Authentication and personalized dashboard
-4. **📊 Data Processing**: Automated text extraction and alignment tools
-5. **🔧 Admin Interface**: Comprehensive backend management
-6. **🚀 Production Ready**: Full deployment and monitoring capabilities
+</div>
 
-## ✨ Features
+<table align="center">
+<tr>
+<td align="center" width="33%">
 
 ### 🔄 Translation Services
-- **PDF Translation**: Upload English PDF documents (up to 100MB) for complete Telugu translation
-- **Document Translation**: Support for PDF, DOCX, and TXT files with structure preservation
-- **Text Translation**: Direct text input with support for up to 5000 characters
-- **OCR Integration**: Automatic text extraction from image-based PDFs using Tesseract
-- **Real-time Progress**: Live progress tracking with completion percentages
-- **Background Processing**: Non-blocking translation with AJAX-based updates
-- **Smart Document Processing**: Maintains original formatting and structure
+**🤖 AI-Powered Translation**
+- 📄 PDF & Document Translation
+- ⚡ Real-time Text Translation  
+- 👁️ OCR Integration
+- 🔧 Structure Preservation
+
+</td>
+<td align="center" width="33%">
+
+### 📚 Training Data
+**🎯 Smart Data Management**
+- ✏️ Interactive Dataset Editor
+- 📊 Multiple Import Methods
+- ✅ Quality Validation
+- 📤 Export Capabilities
+
+</td>
+<td align="center" width="33%">
+
+### 🚀 Production Ready
+**🏢 Enterprise Features**
+- 👥 User Authentication
+- ⚙️ Admin Interface
+- 📊 Performance Monitoring
+- 🌐 Deployment Tools
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+**🌟 DM Translator** is a comprehensive Django web application that provides powerful English to Telugu translation capabilities along with training data management features. Built with the state-of-the-art **IndicTrans2** model from AI4Bharat, it offers superior translation quality specifically designed for Indian languages.
+
+### 🎯 Core Capabilities
+
+<p>
+  <img src="https://img.shields.io/badge/🔄_Translation_Services-blue?style=flat-square&logo=translate" alt="Translation">
+  <img src="https://img.shields.io/badge/📚_Training_Data_Management-green?style=flat-square&logo=database" alt="Training">
+  <img src="https://img.shields.io/badge/👥_User_Management-orange?style=flat-square&logo=users" alt="Users">
+  <img src="https://img.shields.io/badge/📊_Data_Processing-purple?style=flat-square&logo=chart-bar" alt="Processing">
+  <img src="https://img.shields.io/badge/🔧_Admin_Interface-red?style=flat-square&logo=settings" alt="Admin">
+  <img src="https://img.shields.io/badge/🚀_Production_Ready-teal?style=flat-square&logo=rocket" alt="Production">
+</p>
+
+</div>
+
+<div align="center">
+
+## ⭐ Features
+
+<img src="https://img.shields.io/badge/🎯_40+_Features-Comprehensive_Solution-4CAF50?style=for-the-badge&logo=feature-list" alt="40+ Features">
+
+</div>
+
+<details>
+<summary><strong>🔄 Translation Services</strong> - 📄 Document & Text Translation</summary>
+
+<table>
+<tr>
+<td width="50%">
+
+**📄 Document Translation**
+- 📁 PDF, DOCX, TXT support (up to 100MB)
+- 🎨 Structure preservation
+- 👁️ OCR for image-based PDFs
+- 💾 Multiple download formats
+
+</td>
+<td width="50%">
+
+**⚡ Real-time Processing**
+- 📊 Live progress tracking
+- 🔄 Background processing
+- 🌐 AJAX-based updates
+- 💾 Session management
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**🎨 Output Formats**
+- 🇮🇳 Telugu (Unicode)
+- 🔤 Devanagari conversion
+- 📝 Anu Script format
+- 🖋️ Ramabhadra font
+
+</td>
+<td width="50%">
+
+**🔧 Smart Features**
+- 🔢 Character counters
+- 📋 Copy-to-clipboard
+- 📖 Sample text loading
+- ⭐ Quality ratings
+
+</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary><strong>📚 Training Data Management</strong> - 🎯 Dataset Creation & Management</summary>
+
+<table>
+<tr>
+<td width="50%">
+
+**📊 Dataset Creation**
+- 📤 Upload CSV files
+- 🔄 Create from translations
+- 📝 Empty dataset start
+- 🧠 Smart parsing
+
+</td>
+<td width="50%">
+
+**✏️ Interactive Editor**
+- ➕ Add/edit/delete entries
+- 📋 Column management
+- 👁️ Live preview
+- 📦 Bulk operations
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**🔄 Workflow Management**
+- 📝 Draft → ✅ Verified → 📤 Exported
+- 📊 Status tracking
+- ✅ Quality validation
+- 💾 Export capabilities
+
+</td>
+<td width="50%">
+
+**🔍 Advanced Features**
+- 🔍 Search & pagination
+- ⚙️ Segment processing
+- 🎯 Text alignment
+- 🔍 Format detection
+
+</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary><strong>🎯 User Experience</strong> - 🎨 Modern UI & Mobile Support</summary>
+
+<table>
+<tr>
+<td width="50%">
+
+**🎨 Modern UI**
+- 🌈 Bootstrap 5 design
+- ✨ Animated dashboard
+- 📱 Responsive layout
+- 🔔 Toast notifications
+
+</td>
+<td width="50%">
+
+**📱 Mobile Optimized**
+- 👆 Touch-friendly interface
+- 📊 Responsive tables
+- 👆 Swipe gestures
+- 🧭 Adaptive navigation
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**⚡ Interactive Elements**
+- 📏 Resizable columns
+- 📊 Progress indicators
+- 🎴 Method selection cards
+- ⚡ Quick actions
+
+</td>
+<td width="50%">
+
+**🔧 User Tools**
+- 💚 Health monitoring
+- 🐛 Debug endpoints
+- 👤 Profile management
+- ⚙️ Settings access
+
+</td>
+</tr>
+</table>
+
+</details>
+
+<details>
+<summary><strong>🔧 Technical Features</strong> - 🤖 AI Integration & Performance</summary>
+
+<table>
+<tr>
+<td width="50%">
+
+**🤖 AI Integration**
+- 🧠 IndicTrans2 model
+- 🔄 Smart fallback
+- 🖥️ GPU/CPU support
+- 📦 Chunked processing
+
+</td>
+<td width="50%">
+
+**🔒 Security**
+- 🔐 Session management
+- ⚠️ Error handling
+- 👤 User authentication
+- ✅ Data validation
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**📄 Document Processing**
+- 🎨 Structure preservation
+- 📁 Multi-format support
+- 👁️ OCR capabilities
+- 🌐 HTML conversion
+
+</td>
+<td width="50%">
+
+**📊 Performance**
+- 📈 Progress tracking
+- 🔤 Unicode processing
+- ✂️ Text segmentation
+- 🎯 Probability matching
+
+</td>
+</tr>
+</table>
+
+</details>
+
+<div align="center">
+
+### 🌟 Key Highlights
+
+<p>
+  <img src="https://img.shields.io/badge/📄_100MB-File_Upload_Limit-success?style=flat-square&logo=upload" alt="File Upload">
+  <img src="https://img.shields.io/badge/⚡_Real_time-Progress_Tracking-blue?style=flat-square&logo=progress" alt="Progress">
+  <img src="https://img.shields.io/badge/🤖_AI_Powered-IndicTrans2-red?style=flat-square&logo=artificial-intelligence" alt="AI">
+  <img src="https://img.shields.io/badge/📱_Mobile-Responsive-orange?style=flat-square&logo=mobile" alt="Mobile">
+  <img src="https://img.shields.io/badge/🔒_Secure-Authentication-purple?style=flat-square&logo=security" alt="Security">
+</p>
+
+</div>
 - **Multiple Download Formats**: Save as TXT, DOCX, or Anu Script format
 - **Ramabhadra Font**: Authentic Telugu typography for better readability
 
@@ -106,98 +467,250 @@ DM Translator is a comprehensive Django web application that provides powerful E
 - **Translation Mapping**: Create precise translation maps for document reconstruction
 - **Quality Preservation**: Maintain document quality through processing pipeline
 
+<div align="center">
+
 ## 📋 System Requirements
 
-### Development Environment
-- **OS**: Windows 10+, macOS 10.14+, Ubuntu 18.04+
-- **Python**: 3.8 or higher
-- **RAM**: Minimum 8GB (16GB+ recommended for ML models)
-- **Storage**: 10GB+ free space
-- **Network**: Stable internet connection
+<img src="https://img.shields.io/badge/🖥️_Development-Local_Setup-4CAF50?style=for-the-badge&logo=computer" alt="Development">
+<img src="https://img.shields.io/badge/🚀_Production-Cloud_Ready-FF9800?style=for-the-badge&logo=cloud" alt="Production">
 
-### Production Environment
-- **OS**: Ubuntu 20.04+ LTS (recommended)
-- **RAM**: Minimum 8GB (16GB+ recommended for ML models)
-- **CPU**: 4+ cores
-- **Storage**: 50GB+ SSD
-- **Database**: PostgreSQL 12+
-- **Web Server**: Nginx + Gunicorn
-- **Network**: Stable internet connection, domain name
+</div>
 
-### Software Dependencies
-**Core Framework:**
-- Python 3.8+
-- Django 5.2.4
-- PostgreSQL 12+ (production)
-- Git
-- Virtual environment support
+<table align="center">
+<tr>
+<td align="center" width="50%">
 
-**Machine Learning & NLP:**
-- PyTorch 2.7.1
-- Transformers 4.53.1
-- Tokenizers 0.21.2
-- HuggingFace Hub 0.33.2
-- NumPy 2.2.6
-- Pandas 2.3.0
-- NLTK 3.9.1
+### 🖥️ Development Environment
+<p>
+  <img src="https://img.shields.io/badge/💻_Windows-10+-0078D6?style=flat&logo=windows&logoColor=white" alt="Windows">
+  <img src="https://img.shields.io/badge/🍎_macOS-10.14+-000000?style=flat&logo=apple&logoColor=white" alt="macOS">
+  <img src="https://img.shields.io/badge/🐧_Ubuntu-18.04+-E95420?style=flat&logo=ubuntu&logoColor=white" alt="Ubuntu">
+</p>
 
-**Indic Language Support:**
-- indic-nlp-library 0.92
-- indic-transliteration 2.3.69
+**🔧 Requirements:**
+- **🐍 Python**: 3.8 or higher
+- **💾 RAM**: 8GB (16GB+ recommended)
+- **💿 Storage**: 10GB+ free space
+- **🌐 Network**: Stable internet
 
-**Document Processing:**
-- PyPDF2 3.0.1
-- python-docx 1.2.0
-- pdf2image 1.17.0
-- pytesseract 0.3.13
-- Pillow 11.3.0
-- PyMuPDF 1.24.7
-- BeautifulSoup4 4.12.3
+</td>
+<td align="center" width="50%">
 
-**Production Stack:**
-- Gunicorn 21.2.0
-- WhiteNoise 6.6.0
-- psycopg2-binary 2.9.9
+### 🚀 Production Environment
+<p>
+  <img src="https://img.shields.io/badge/🐧_Ubuntu-20.04_LTS-E95420?style=flat&logo=ubuntu&logoColor=white" alt="Ubuntu LTS">
+  <img src="https://img.shields.io/badge/🐘_PostgreSQL-12+-336791?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/🌐_Nginx-Latest-009639?style=flat&logo=nginx&logoColor=white" alt="Nginx">
+</p>
 
-**System Dependencies:**
-- Tesseract OCR
-- Poppler utilities
+**⚡ Requirements:**
+- **💾 RAM**: 8GB (16GB+ recommended)
+- **🖥️ CPU**: 4+ cores
+- **💿 Storage**: 50GB+ SSD
+- **🐘 Database**: PostgreSQL 12+
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary><strong>📦 Software Dependencies</strong> - 🛠️ Complete Tech Stack</summary>
+
+<div align="center">
+
+### 🚀 Core Framework
+<p>
+  <img src="https://img.shields.io/badge/🐍_Python-3.8+-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/🌐_Django-5.2.4-092E20?style=flat&logo=django&logoColor=white" alt="Django">
+  <img src="https://img.shields.io/badge/🐘_PostgreSQL-12+-336791?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/📊_Git-Latest-F05032?style=flat&logo=git&logoColor=white" alt="Git">
+  <img src="https://img.shields.io/badge/⚙️_dotenv-1.0.0-00D084?style=flat&logo=dotenv&logoColor=white" alt="dotenv">
+</p>
+
+### 🤖 Machine Learning & NLP
+<p>
+  <img src="https://img.shields.io/badge/🔥_PyTorch-2.7.1-EE4C2C?style=flat&logo=pytorch&logoColor=white" alt="PyTorch">
+  <img src="https://img.shields.io/badge/🤗_Transformers-4.53.1-FF6F00?style=flat&logo=huggingface&logoColor=white" alt="Transformers">
+  <img src="https://img.shields.io/badge/🔢_NumPy-2.2.6-013243?style=flat&logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/🐼_Pandas-2.3.0-150458?style=flat&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/📝_NLTK-3.9.1-green?style=flat&logo=nltk&logoColor=white" alt="NLTK">
+  <img src="https://img.shields.io/badge/🚀_Accelerate-1.2.1-FF6B35?style=flat&logo=accelerate&logoColor=white" alt="Accelerate">
+</p>
+
+### 📄 Document Processing
+<p>
+  <img src="https://img.shields.io/badge/📄_PyPDF2-3.0.1-red?style=flat&logo=pdf&logoColor=white" alt="PyPDF2">
+  <img src="https://img.shields.io/badge/📝_python--docx-1.2.0-blue?style=flat&logo=microsoft-word&logoColor=white" alt="python-docx">
+  <img src="https://img.shields.io/badge/👁️_Tesseract-OCR-4285F4?style=flat&logo=tesseract&logoColor=white" alt="Tesseract">
+  <img src="https://img.shields.io/badge/🖼️_Pillow-11.3.0-yellow?style=flat&logo=pillow&logoColor=white" alt="Pillow">
+  <img src="https://img.shields.io/badge/🔍_PyMuPDF-1.24.7-purple?style=flat&logo=pdf&logoColor=white" alt="PyMuPDF">
+</p>
+
+### 🌐 Production Stack
+<p>
+  <img src="https://img.shields.io/badge/🦄_Gunicorn-21.2.0-499848?style=flat&logo=gunicorn&logoColor=white" alt="Gunicorn">
+  <img src="https://img.shields.io/badge/⚡_WhiteNoise-6.6.0-lightgrey?style=flat&logo=whitenoise&logoColor=white" alt="WhiteNoise">
+  <img src="https://img.shields.io/badge/🐘_psycopg2-2.9.9-336791?style=flat&logo=postgresql&logoColor=white" alt="psycopg2">
+  <img src="https://img.shields.io/badge/🎨_Bootstrap-5.0-7952B3?style=flat&logo=bootstrap&logoColor=white" alt="Bootstrap">
+</p>
+
+### ⚡ Performance & Enhancement
+<p>
+  <img src="https://img.shields.io/badge/🗄️_Redis-5.2.1-DC382D?style=flat&logo=redis&logoColor=white" alt="Redis">
+  <img src="https://img.shields.io/badge/📊_DRF-3.15.2-red?style=flat&logo=django&logoColor=white" alt="Django REST">
+  <img src="https://img.shields.io/badge/🔐_Allauth-65.3.0-green?style=flat&logo=auth0&logoColor=white" alt="Allauth">
+  <img src="https://img.shields.io/badge/🎨_Crispy_Forms-2.3-blue?style=flat&logo=forms&logoColor=white" alt="Crispy Forms">
+</p>
+
+</div>
+
+</details>
+
+<div align="center">
+
+### 🎯 Installation Commands
+
+```bash
+# 📦 Install all dependencies
+pip install -r requirements.txt
+
+# 🛠️ Development tools (optional)
+pip install -r requirements-dev.txt
+```
+
+</div>
+
+<div align="center">
 
 ## 🚀 Quick Start
 
-### Local Development Setup
+<img src="https://img.shields.io/badge/⏱️_Setup_Time-5_Minutes-4CAF50?style=for-the-badge&logo=clock" alt="Setup Time">
+<img src="https://img.shields.io/badge/🛠️_Difficulty-Beginner_Friendly-2196F3?style=for-the-badge&logo=star" alt="Difficulty">
 
-1. **Clone the Repository**
-```bash
-git clone https://github.com/dmouli408/DM_Translator.git
-cd DM_Translator/dm_translator
-```
+</div>
 
-2. **Create Virtual Environment**
+<table align="center">
+<tr>
+<td width="50%">
+
+### 📥 Setup Steps
+
 ```bash
+# 1️⃣ Clone Repository
+git clone https://github.com/dmouli408/dm_translator.git
+cd dm_translator/dm_translator
+
+# 2️⃣ Create Virtual Environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-3. **Install Dependencies**
-```bash
+# 3️⃣ Install Dependencies
 pip install -r requirements.txt
-```
 
-4. **Database Setup**
-```bash
+# 4️⃣ Environment Setup
+cp .env.example .env
+# Edit .env with your settings
+
+# 5️⃣ Database Setup
 python manage.py migrate
 python manage.py createsuperuser
-```
 
-5. **Run Development Server**
-```bash
+# 6️⃣ Run Server
 python manage.py runserver
 ```
 
-6. **Access Application**
-- Main App: http://127.0.0.1:8000/
-- Admin Panel: http://127.0.0.1:8000/admin/
+</td>
+<td width="50%">
+
+### 🌐 Access Points
+
+<div align="center">
+
+**🏠 Main Application**
+<br>
+<a href="http://127.0.0.1:8000/">
+  <img src="https://img.shields.io/badge/🌐_Main_App-127.0.0.1:8000-4CAF50?style=for-the-badge&logo=web&logoColor=white" alt="Main App">
+</a>
+
+**⚙️ Admin Panel**
+<br>
+<a href="http://127.0.0.1:8000/admin/">
+  <img src="https://img.shields.io/badge/🔧_Admin_Panel-127.0.0.1:8000/admin-FF5722?style=for-the-badge&logo=settings&logoColor=white" alt="Admin">
+</a>
+
+**📚 API Documentation**
+<br>
+<a href="#-usage-manual">
+  <img src="https://img.shields.io/badge/📖_API_Docs-Usage_Manual-2196F3?style=for-the-badge&logo=api&logoColor=white" alt="API">
+</a>
+
+**💡 Health Check**
+<br>
+<a href="http://127.0.0.1:8000/health/">
+  <img src="https://img.shields.io/badge/💚_Health_Check-127.0.0.1:8000/health-009688?style=for-the-badge&logo=heart&logoColor=white" alt="Health">
+</a>
+
+</div>
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+### 🎉 You're Ready to Translate!
+
+<p>
+  <img src="https://img.shields.io/badge/✅_Environment_Setup-Complete-success?style=flat-square&logo=checkmark" alt="Setup">
+  <img src="https://img.shields.io/badge/✅_Database_Ready-Complete-success?style=flat-square&logo=database" alt="Database">
+  <img src="https://img.shields.io/badge/✅_Server_Running-Complete-success?style=flat-square&logo=server" alt="Server">
+  <img src="https://img.shields.io/badge/✅_Models_Loading-Complete-success?style=flat-square&logo=artificial-intelligence" alt="Models">
+</p>
+
+### 🚀 Next Steps
+
+<table align="center">
+<tr>
+<td align="center" width="25%">
+
+**1️⃣ Upload Document**
+<br>
+📄 Try PDF translation
+<br>
+<small>Upload any English PDF</small>
+
+</td>
+<td align="center" width="25%">
+
+**2️⃣ Text Translation**
+<br>
+📝 Direct text input
+<br>
+<small>Translate up to 5000 chars</small>
+
+</td>
+<td align="center" width="25%">
+
+**3️⃣ Create Dataset**
+<br>
+📊 Training data management
+<br>
+<small>Build your own datasets</small>
+
+</td>
+<td align="center" width="25%">
+
+**4️⃣ Admin Panel**
+<br>
+⚙️ System management
+<br>
+<small>Monitor & configure</small>
+
+</td>
+</tr>
+</table>
+
+</div>
 
 ## 👨‍💼 Admin Manual
 
@@ -463,7 +976,7 @@ sudo mkdir -p /var/www/dm_translator
 cd /var/www/dm_translator
 
 # Clone the repository
-sudo git clone https://github.com/dmouli408/DM_Translator.git .
+sudo git clone https://github.com/dmouli408/dm_translator.git .
 
 # Set ownership
 sudo chown -R $USER:$USER /var/www/dm_translator
@@ -1290,7 +1803,7 @@ systemctl status dm_translator nginx postgresql
 ### Getting Help
 
 #### Documentation
-- **GitHub Repository**: https://github.com/dmouli408/DM_Translator
+- **GitHub Repository**: https://github.com/dmouli408/dm_translator
 - **Issues**: Report bugs and request features
 - **Discussions**: Community support and questions
 
@@ -1330,8 +1843,8 @@ systemctl status dm_translator nginx postgresql
 
 ```bash
 # Clone for development
-git clone https://github.com/dmouli408/DM_Translator.git
-cd DM_Translator/dm_translator
+git clone https://github.com/dmouli408/dm_translator.git
+cd dm_translator/dm_translator
 
 # Install development dependencies
 pip install -r requirements.txt
@@ -1346,33 +1859,159 @@ black .
 isort .
 ```
 
-### License
+### 📜 License
+
+<div align="center">
+
+<p>
+  <img src="https://img.shields.io/badge/📜_License-MIT-green?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="MIT License">
+  <img src="https://img.shields.io/badge/🆓_Free_to_Use-Open_Source-4CAF50?style=for-the-badge&logo=osi&logoColor=white" alt="Free to Use">
+</p>
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Acknowledgments
+</div>
 
-- **AI4Bharat** for the IndicTrans2 model
-- **Django Community** for the excellent framework
-- **Bootstrap** for the UI components
-- **Contributors** who help improve this project
+### 🙏 Acknowledgments
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="25%">
+
+**🤖 AI4Bharat**
+<br>
+<img src="https://img.shields.io/badge/🧠_IndicTrans2-Model-FF6B6B?style=flat&logo=artificial-intelligence&logoColor=white" alt="IndicTrans2">
+<br>
+<small>State-of-the-art translation model</small>
+
+</td>
+<td align="center" width="25%">
+
+**🌐 Django Community**
+<br>
+<img src="https://img.shields.io/badge/🚀_Django-Framework-092E20?style=flat&logo=django&logoColor=white" alt="Django">
+<br>
+<small>Excellent web framework</small>
+
+</td>
+<td align="center" width="25%">
+
+**🎨 Bootstrap**
+<br>
+<img src="https://img.shields.io/badge/💫_Bootstrap-UI_Components-7952B3?style=flat&logo=bootstrap&logoColor=white" alt="Bootstrap">
+<br>
+<small>Beautiful UI components</small>
+
+</td>
+<td align="center" width="25%">
+
+**👥 Contributors**
+<br>
+<img src="https://img.shields.io/badge/🤝_Community-Contributors-4CAF50?style=flat&logo=people&logoColor=white" alt="Contributors">
+<br>
+<small>Project improvement</small>
+
+</td>
+</tr>
+</table>
 
 ---
 
 **📧 Contact**: For urgent issues or private inquiries, contact the maintainers through GitHub.
 
-**🌟 Star the Project**: If DM Translator helps you, please star the repository to support development!
+<p>
+  <a href="https://github.com/dmouli408/dm_translator">
+    <img src="https://img.shields.io/badge/🌟_Star_this_Project-Support_Development-FFD700?style=for-the-badge&logo=star&logoColor=black" alt="Star Project">
+  </a>
+</p>
 
-**🔄 Stay Updated**: Watch the repository for new releases and updates.
+<p>
+  <a href="https://github.com/dmouli408/dm_translator/subscription">
+    <img src="https://img.shields.io/badge/👀_Watch_for_Updates-Stay_Informed-1976D2?style=for-the-badge&logo=eye&logoColor=white" alt="Watch Updates">
+  </a>
+</p>
 
 ---
 
 ## 🌟 Star this project if it helped you!
-[![GitHub stars](https://img.shields.io/github/stars/dmouli408/DM_Translator.svg?style=social&label=Star)](https://github.com/dmouli408/DM_Translator)
-[![GitHub forks](https://img.shields.io/github/forks/dmouli408/DM_Translator.svg?style=social&label=Fork)](https://github.com/dmouli408/DM_Translator)
 
-## Made with ❤️ by Dasari Mouli
-**Panchayat Secretary Gr-VI (Digital Assistant)**  
-Edupugallu-2 Secretariat, Kankipadu Mandal, Krishna District
+<p>
+  <a href="https://github.com/dmouli408/dm_translator">
+    <img src="https://img.shields.io/github/stars/dmouli408/dm_translator.svg?style=social&label=Star" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/dmouli408/dm_translator">
+    <img src="https://img.shields.io/github/forks/dmouli408/dm_translator.svg?style=social&label=Fork" alt="GitHub Forks">
+  </a>
+  <a href="https://github.com/dmouli408/dm_translator/watchers">
+    <img src="https://img.shields.io/github/watchers/dmouli408/dm_translator.svg?style=social&label=Watch" alt="GitHub Watchers">
+  </a>
+  <a href="https://github.com/dmouli408/dm_translator/issues">
+    <img src="https://img.shields.io/github/issues/dmouli408/dm_translator.svg?style=social&label=Issues" alt="GitHub Issues">
+  </a>
+</p>
 
-*This project was developed independently as a personal initiative to provide quality AI-powered English to Telugu translation services.*
+---
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; text-align: center; margin: 20px 0;">
+
+## 💝 Made with ❤️ by Dasari Mouli
+
+<img src="https://img.shields.io/badge/👨‍💻_Developer-Dasari_Mouli-9C27B0?style=for-the-badge&logo=github&logoColor=white" alt="Developer">
+
+**🏢 Panchayat Secretary Gr-VI (Digital Assistant)**  
+📍 Edupugallu-2 Secretariat, Kankipadu Mandal, Krishna District
+
+<p style="margin-top: 15px;">
+  <img src="https://img.shields.io/badge/🇮🇳_Andhra_Pradesh-India-FF6B35?style=flat&logoColor=white" alt="Location">
+  <img src="https://img.shields.io/badge/💼_Government_Service-Public_Sector-4CAF50?style=flat&logoColor=white" alt="Service">
+  <img src="https://img.shields.io/badge/🌟_Personal_Project-Independent_Development-9C27B0?style=flat&logoColor=white" alt="Personal">
+  <img src="https://img.shields.io/badge/🎯_Open_Source-MIT_License-00D084?style=flat&logoColor=white" alt="Open Source">
+</p>
+
+<p style="margin-top: 20px;">
+  <a href="https://github.com/dmouli408">
+    <img src="https://img.shields.io/badge/🔗_GitHub-@dmouli408-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile">
+  </a>
+  <a href="mailto:dmouli408@gmail.com">
+    <img src="https://img.shields.io/badge/📧_Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="tel:+919063946623">
+    <img src="https://img.shields.io/badge/📱_Mobile-+91_9063946623-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Mobile">
+  </a>
+</p>
+
+<p style="font-style: italic; margin-top: 15px; font-size: 14px; opacity: 0.9;">
+<em>✨ This project was developed independently as a personal initiative to provide quality AI-powered English to Telugu translation services for the community. ✨</em>
+</p>
+
+### 🎯 Project Vision
+
+<p style="margin-top: 10px; font-size: 13px;">
+<strong>🌟 Bridging Language Barriers</strong> • <strong>🤖 AI for Everyone</strong> • <strong>🇮🇳 Telugu Pride</strong> • <strong>💡 Innovation in Government</strong>
+</p>
+
+</div>
+
+<div align="center">
+
+### 🚀 Ready to Contribute?
+
+<p>
+  <a href="https://github.com/dmouli408/dm_translator/fork">
+    <img src="https://img.shields.io/badge/🍴_Fork_Project-Get_Started-28a745?style=for-the-badge&logo=git&logoColor=white" alt="Fork">
+  </a>
+  <a href="https://github.com/dmouli408/dm_translator/issues/new">
+    <img src="https://img.shields.io/badge/🐛_Report_Issue-Help_Improve-dc3545?style=for-the-badge&logo=bug&logoColor=white" alt="Report Issue">
+  </a>
+  <a href="https://github.com/dmouli408/dm_translator/discussions">
+    <img src="https://img.shields.io/badge/💬_Join_Discussion-Community-6f42c1?style=for-the-badge&logo=discourse&logoColor=white" alt="Discussion">
+  </a>
+</p>
+
+**⭐ Thank you for using DM Translator! ⭐**
+
+</div>
+
+</div>
